@@ -1694,7 +1694,7 @@ function CardsSection() {
       {/* Feature Card */}
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Feature Card</h2>
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
             {
               title: "Comprehensive Tests",
