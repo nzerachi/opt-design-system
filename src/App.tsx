@@ -281,7 +281,7 @@ export default function App() {
             )}
           </div>
 
-          <div className="mt-20 py-10 px-8 border-t border-border flex justify-between items-center gap-4">
+          <div className="mt-20 py-10 px-2 md:px-8 border-t border-border flex justify-between items-center">
             {/* Previous Button */}
             {prevPage ? (
               <button
@@ -294,11 +294,11 @@ export default function App() {
                     Previous
                   </span>
                   <div className="flex flex-col">
-                    <span className="font-semibold text-foreground/50 -mt-1.5">
+                    <span className="font-semibold text-foreground/50 leading-4 mb-0.5">
                       {prevPage.label}
                     </span>
                     {prevPage.parentLabel && (
-                      <span className="text-xs text-foreground -mt-0.75">
+                      <span className="text-xs text-foreground ">
                         in {prevPage.parentLabel}
                       </span>
                     )}
@@ -320,11 +320,11 @@ export default function App() {
                     Next
                   </span>
                   <div className="flex flex-col">
-                    <span className="font-semibold text-foreground/50 -mt-1.5">
+                    <span className="font-semibold text-foreground/50 leading-4 mb-0.5">
                       {nextPage.label}
                     </span>
                     {nextPage.parentLabel && (
-                      <span className="text-xs text-foreground -mt-0.75">
+                      <span className="text-xs text-foreground">
                         in {nextPage.parentLabel}
                       </span>
                     )}
