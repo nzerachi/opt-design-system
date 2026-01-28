@@ -1,0 +1,299 @@
+/* Ubuntu Light (300) */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("src/ubuntu/ubuntu-300.woff2") format("woff2");
+}
+/* Ubuntu Light Italic (300) */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("src/ubuntu/ubuntu-300italic.woff2") format("woff2");
+}
+
+/* Ubuntu Regular (400) */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("src/ubuntu/ubuntu-400.woff2") format("woff2");
+}
+/* Ubuntu Italic (400) */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("src/ubuntu/ubuntu-400italic.woff2") format("woff2");
+}
+
+/* Ubuntu SemiBold (500) */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("src/ubuntu/ubuntu-500.woff2") format("woff2");
+}
+/* Ubuntu SemiBold Italic (500) */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("src/ubuntu/ubuntu-500italic.woff2") format("woff2");
+}
+
+/* Ubuntu Bold (700) */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("src/ubuntu/ubuntu-700.woff2") format("woff2");
+}
+/* Ubuntu Bold Italic (700) */
+@font-face {
+  font-family: "Ubuntu";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("src/ubuntu/ubuntu-700italic.woff2") format("woff2");
+}
+
+/* ----------------------------------------------------------- */
+
+/* Ubuntu Mono (400) */
+@font-face {
+  font-family: "Ubuntu Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("src/ubuntu/ubuntu-mono-400.woff2") format("woff2");
+}
+/* Ubuntu Mono Italic (400) */
+@font-face {
+  font-family: "Ubuntu Mono";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("src/ubuntu/ubuntu-mono-400italic.woff2") format("woff2");
+}
+
+/* Ubuntu Mono Bold (700) */
+@font-face {
+  font-family: "Ubuntu Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("src/ubuntu/ubuntu-mono-700.woff2") format("woff2");
+}
+/* Ubuntu Mono Bold Italic (700) */
+@font-face {
+  font-family: "Ubuntu Mono";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("src/ubuntu/ubuntu-mono-700italic.woff2") format("woff2");
+}
+
+/* 1. Import Tailwind v4 */
+
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-sans:
+    "Ubuntu", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+
+  /* Screen Breakpoints */
+  --breakpoint-md2: 900px;
+
+  /* Custom Brand Colors (Hex codes are safe) */
+  --color-brand-purple: #ff004f;
+  --color-brand-folly: #cc33ff;
+  --color-brand-orange: #ff8000;
+
+  /* Semantic Colors (The Fix: Wrapping variables in hsl() ) */
+  --color-background: hsl(var(--background));
+  --color-obackground: hsl(var(--obackground));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-muted-light: hsl(var(--muted-light));
+  --color-muted-dark: hsl(var(--muted-dark));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  /* Radius defaults */
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  /* Animations */
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+  :root {
+    /* Light Mode Colors */
+    --background: 0 0% 100%;
+    --obackground: 0 0% 95%;
+    --foreground: 0 0% 0%;
+
+    --muted-light: 0 0% 85%;
+    --muted-dark: 0 0% 50%;
+
+    --destructive: 340 100% 50%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 10%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark Mode Colors */
+    --background: 0 0% 0%;
+    --obackground: 0 0% 10%;
+    --foreground: 0 0% 100%;
+
+    --muted-light: 0 0% 15%;
+    --muted-dark: 0 0% 50%;
+
+    --destructive: 340 100% 50%;
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 80%;
+  }
+
+  input,
+  progress {
+    accent-color: var(--color-brand-orange);
+  }
+
+  input,
+  textarea,
+  select {
+    caret-color: var(--color-brand-orange);
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border-color: var(--color-brand-orange) !important;
+    outline: none;
+    /* Tailwind Ring Override */
+    --tw-ring-color: var(--color-brand-orange) !important;
+    --tw-ring-opacity: 0.3;
+    /* Standard CSS Fallback Ring */
+    box-shadow: 0 0 0 4px rgba(255, 128, 0, 0.2) !important;
+  }
+
+  /* 4. File Upload Button 
+     Styles the native "Choose File" button */
+  ::file-selector-button {
+    background-color: var(--color-brand-orange) !important;
+    color: white !important;
+    border: 1px solid var(--color-brand-orange) !important;
+    border-radius: 0.375rem; /* rounded-md */
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+  }
+
+  /* 5. Native Input Icons 
+     Colors the Calendar icon (date), Clock (time), and Search 'X' */
+  ::-webkit-calendar-picker-indicator,
+  ::-webkit-search-cancel-button,
+  ::-webkit-inner-spin-button {
+    /* This filter forces the icon to turn #ff8000 */
+    filter: invert(56%) sepia(63%) saturate(3065%) hue-rotate(1deg)
+      brightness(103%) contrast(105%);
+    cursor: pointer;
+  }
+
+  /* GLOBAL: Color Picker (Fixing the default ugly look) */
+  input[type="color"] {
+    -webkit-appearance: none;
+    border: 1px solid var(--border);
+    padding: 2px;
+    background-color: var(--background);
+    cursor: pointer;
+    border-radius: 0.5rem; /* rounded-lg */
+    height: 2.5rem; /* h-10 */
+  }
+
+  input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  input[type="color"]::-webkit-color-swatch {
+    border: none;
+    border-radius: 0.3rem;
+  }
+
+  ::selection {
+    /* #FF8000 with ~10% opacity (Hex Alpha 1A) */
+    background-color: #ff800034;
+    /* Ensures the text color itself doesn't shift weirdly */
+    color: inherit;
+  }
+
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .hatch-brand-orange {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 4px,
+      rgba(255, 128, 0, 0.3) 4px,
+      rgba(255, 128, 0, 0.3) 5px
+    );
+  }
+  .hatch-brand-folly {
+    background-image: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 4px,
+      rgba(255, 0, 238, 0.3) 4px,
+      rgba(255, 0, 238, 0.3) 5px
+    );
+  }
+}
