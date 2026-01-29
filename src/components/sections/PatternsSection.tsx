@@ -37,12 +37,11 @@ function LayoutPatterns() {
         </div>
         <div className="border border-border rounded-lg overflow-hidden">
           <div className="bg-linear-to-br from-muted/50 to-muted/20 p-16 text-center">
-            <h1 className="text-5xl font-bold mb-4">See the World Clearly</h1>
-            <p className="text-xl text-foreground/75 mb-8">Get a Pair Now</p>
+            <h1 className="md:text-5xl text-[44px] leading-12 font-bold mb-4">See the World <br className="block md:hidden"/> Clearly</h1>
             <p className="text-sm text-foreground/75 max-w-2xl mx-auto mb-8">
               Browse our curated and certified exclusive frames
             </p>
-            <button className="px-8 py-4 bg-foreground text-background rounded-lg font-bold">
+            <button className="px-8 py-4 bg-foreground hover:bg-background hover:text-foreground hover:outline-2 focus:bg-background focus:text-foreground focus:outline-2 text-background rounded-lg font-bold">
               Get a Pair Now
             </button>
           </div>

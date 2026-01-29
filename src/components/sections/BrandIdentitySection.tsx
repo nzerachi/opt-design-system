@@ -934,7 +934,7 @@ function UsageGuidelines() {
           <div className="border-2 border-destructive/50 rounded-lg p-6 bg-destructive/5">
             <div className="flex items-center gap-2 mb-4 text-destructive">
               <XCircle className="w-5 h-5" />
-              <span className="font-bold text-sm">Don't Stretch</span>
+              <span className="font-bold text-sm">Don't Stretch </span>
             </div>
             <div className="bg-background/50 rounded p-4 flex items-center justify-center">
               <div className="w-[200px] h-[35px]">
@@ -1013,7 +1013,8 @@ function UsageGuidelines() {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Logo Selection Guide</h2>
         <div className="border border-border rounded-lg overflow-hidden">
-          <table className="w-full text-sm">
+          <div className="overflow-x-auto">
+          <table className="w-full min-w-xl text-sm">
             <thead className="bg-muted-light border-b border-border">
               <tr>
                 <th className="text-left p-4 font-bold">Use Case</th>
@@ -1073,6 +1074,7 @@ function UsageGuidelines() {
               </tr>
             </tbody>
           </table>
+        </div>
         </div>
       </section>
     </div>

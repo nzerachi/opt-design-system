@@ -45,7 +45,7 @@ export function ThemeToggle() {
 
 function ThemeIcon() {
   return (
-    <div className="relative size-[35px]">
+    <div className="relative size-[30px]">
       <svg
         className="block size-full"
         fill="none"
@@ -53,7 +53,7 @@ function ThemeIcon() {
         viewBox="0 0 35 35"
       >
         <g>
-          <circle cx="17.5" cy="17.5" fill="hsl(var(--background))" r="17.5" />
+          <circle cx="17.5" cy="17.5" fill="none" r="17.5" />
           <circle
             cx="17.5"
             cy="17.5"

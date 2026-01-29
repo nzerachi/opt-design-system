@@ -324,15 +324,15 @@ function ColorSystem() {
                 Light Gray text on Dark Gray
               </span>
               <span className="text-sm font-mono text-brand-purple">
-                18.5:1 ✓ AAA
+                8.18:1 ✓ AAA
               </span>
             </div>
             <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200">
-              <span className="text-[#808080] font-medium">
-                Gray text on White background
+              <span className="text-[#414141] font-medium">
+                Dark Gray text on White background
               </span>
               <span className="text-sm font-mono text-brand-purple">
-                4.6:1 ✓ AA
+                10.21:1 ✓ AA
               </span>
             </div>
             <div className="flex items-center justify-between p-4 bg-black rounded-lg">
@@ -340,15 +340,39 @@ function ColorSystem() {
                 Orange on Black
               </span>
               <span className="text-sm font-mono text-brand-purple">
-                9.8:1 ✓ AAA
+                8.34:1 ✓ AAA
               </span>
             </div>
             <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200">
-              <span className="text-brand-folly font-medium">
-                Folly on White
+              <span className="text-brand-orange font-medium">
+                Orange on White
+              </span>
+              <span className="text-sm font-mono text-brand-folly">
+                2.52:1 × AAA
+              </span>
+            </div>
+            <div className="flex items-center justify-between p-4 bg-black rounded-lg border border-gray-200">
+              <span className="text-brand-purple font-medium">
+                Neon Purple on Black
               </span>
               <span className="text-sm font-mono text-brand-purple">
-                5.2:1 ✓ AA
+                5.49:1 ✓ AA
+              </span>
+            </div>
+            <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200">
+              <span className="text-brand-purple font-medium">
+                Neon Purple on White
+              </span>
+              <span className="text-sm font-mono text-brand-folly">
+                3.83:1 × AA
+              </span>
+            </div>
+            <div className="flex items-center justify-between p-4 bg-black rounded-lg border border-gray-200">
+              <span className="text-brand-folly font-medium">
+                Folly on Black
+              </span>
+              <span className="text-sm font-mono text-brand-purple">
+                5.36:1 ✓ AA
               </span>
             </div>
           </div>
@@ -1054,7 +1078,7 @@ function Imagery() {
             Curated collection of brand-appropriate photography
           </p>
         </div>
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="border border-border rounded-lg overflow-hidden">
             <div className="aspect-square bg-muted-light">
               <img
@@ -1244,54 +1268,56 @@ function Imagery() {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Image Usage by Context</h2>
         <div className="border border-border rounded-lg overflow-hidden">
-          <table className="w-full text-sm">
-            <thead className="bg-muted-light border-b border-border">
-              <tr>
-                <th className="text-left p-4">Context</th>
-                <th className="text-left p-4">Image Type</th>
-                <th className="text-left p-4">Aspect Ratio</th>
-                <th className="text-left p-4">Min Resolution</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-border">
-              <tr>
-                <td className="p-4">Hero Section</td>
-                <td className="p-4">Lifestyle, brand graphics</td>
-                <td className="p-4">16:9 or 21:9</td>
-                <td className="p-4">2560 × 1440px</td>
-              </tr>
-              <tr>
-                <td className="p-4">Product Cards</td>
-                <td className="p-4">Eyewear product shots</td>
-                <td className="p-4">1:1 (square)</td>
-                <td className="p-4">800 × 800px</td>
-              </tr>
-              <tr>
-                <td className="p-4">Blog Headers</td>
-                <td className="p-4">Professional, educational</td>
-                <td className="p-4">16:9</td>
-                <td className="p-4">1920 × 1080px</td>
-              </tr>
-              <tr>
-                <td className="p-4">Testimonials</td>
-                <td className="p-4">Portrait photography</td>
-                <td className="p-4">1:1</td>
-                <td className="p-4">400 × 400px</td>
-              </tr>
-              <tr>
-                <td className="p-4">Background Graphics</td>
-                <td className="p-4">Abstract, light flow</td>
-                <td className="p-4">Any</td>
-                <td className="p-4">1920 × 1080px</td>
-              </tr>
-              <tr>
-                <td className="p-4">Social Media</td>
-                <td className="p-4">Lifestyle, promotional</td>
-                <td className="p-4">1:1 or 4:5</td>
-                <td className="p-4">1080 × 1080px</td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-xl text-sm">
+              <thead className="bg-muted-light border-b border-border">
+                <tr>
+                  <th className="text-left p-4">Context</th>
+                  <th className="text-left p-4">Image Type</th>
+                  <th className="text-left p-4">Aspect Ratio</th>
+                  <th className="text-left p-4">Min Resolution</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-border">
+                <tr>
+                  <td className="p-4">Hero Section</td>
+                  <td className="p-4">Lifestyle, brand graphics</td>
+                  <td className="p-4">16:9 or 21:9</td>
+                  <td className="p-4">2560 × 1440px</td>
+                </tr>
+                <tr>
+                  <td className="p-4">Product Cards</td>
+                  <td className="p-4">Eyewear product shots</td>
+                  <td className="p-4">1:1 (square)</td>
+                  <td className="p-4">800 × 800px</td>
+                </tr>
+                <tr>
+                  <td className="p-4">Blog Headers</td>
+                  <td className="p-4">Professional, educational</td>
+                  <td className="p-4">16:9</td>
+                  <td className="p-4">1920 × 1080px</td>
+                </tr>
+                <tr>
+                  <td className="p-4">Testimonials</td>
+                  <td className="p-4">Portrait photography</td>
+                  <td className="p-4">1:1</td>
+                  <td className="p-4">400 × 400px</td>
+                </tr>
+                <tr>
+                  <td className="p-4">Background Graphics</td>
+                  <td className="p-4">Abstract, light flow</td>
+                  <td className="p-4">Any</td>
+                  <td className="p-4">1920 × 1080px</td>
+                </tr>
+                <tr>
+                  <td className="p-4">Social Media</td>
+                  <td className="p-4">Lifestyle, promotional</td>
+                  <td className="p-4">1:1 or 4:5</td>
+                  <td className="p-4">1080 × 1080px</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </section>
     </div>
@@ -1339,7 +1365,8 @@ function SpacingGrid() {
           <p className="text-foreground/75">Predefined spacing values</p>
         </div>
         <div className="border border-border rounded-lg overflow-hidden">
-          <table className="w-full text-sm">
+          <div className="overflow-x-auto">
+          <table className="w-full min-w-sm text-sm">
             <thead className="bg-muted-light border-b border-border">
               <tr>
                 <th className="text-left p-4">Token</th>
@@ -1401,6 +1428,7 @@ function SpacingGrid() {
               </tr>
             </tbody>
           </table>
+        </div>
         </div>
       </section>
 

@@ -166,17 +166,14 @@ export default function App() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/25 backdrop-blur-lg border-b border-border/50">
         <div className="container mx-auto px-6 py-3">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-1">
               <div className="flex items-center gap-2">
-                <Wordmark className="fill-muted-dark stroke-none w-20 mt-0.5" />
+                <Wordmark className="fill-foreground/75 stroke-none w-20" />
               </div>
 
               <div>
-                <h1 className="text-md font-bold">
+                <h1 className="text-md font-medium text-foreground/75">
                   Design System
-                  <span className="text-xs font-normal text-foreground/75">
-                    &nbsp; Version 1.2.4
-                  </span>
                 </h1>
               </div>
             </div>

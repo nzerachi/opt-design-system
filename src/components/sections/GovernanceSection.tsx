@@ -242,7 +242,8 @@ function UsageGuidelines() {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Component Selection</h2>
         <div className="border border-border rounded-lg overflow-hidden">
-          <table className="w-full text-sm">
+          <div className="overflow-x-auto">
+          <table className="w-full min-w-sm text-sm">
             <thead className="bg-muted-light border-b border-border">
               <tr>
                 <th className="text-left p-4 font-bold">Component</th>
@@ -298,6 +299,7 @@ function UsageGuidelines() {
               </tr>
             </tbody>
           </table>
+        </div>
         </div>
       </section>
 

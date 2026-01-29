@@ -1385,13 +1385,6 @@ function NavigationSection() {
               href="#"
               className="text-foreground/75 hover:text-foreground transition-colors"
             >
-              Home
-            </a>
-            <ChevronRight className="w-4 h-4 text-foreground/75" />
-            <a
-              href="#"
-              className="text-foreground/75 hover:text-foreground transition-colors"
-            >
               Products
             </a>
             <ChevronRight className="w-4 h-4 text-foreground/75" />
@@ -1415,9 +1408,6 @@ function NavigationSection() {
             <nav className="flex gap-6">
               <button className="pb-3 px-1 border-b-2 border-foreground font-medium text-sm">
                 Overview
-              </button>
-              <button className="pb-3 px-1 border-b-2 border-transparent text-foreground/75 hover:text-foreground text-sm transition-colors">
-                Specifications
               </button>
               <button className="pb-3 px-1 border-b-2 border-transparent text-foreground/75 hover:text-foreground text-sm transition-colors">
                 Reviews
@@ -1474,7 +1464,7 @@ function NavigationSection() {
         <h2 className="text-2xl font-bold">Footer</h2>
         <div className="border border-border rounded-lg overflow-hidden">
           <div className="bg-muted-light p-8">
-            <div className="grid grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
               <div>
                 <p className="font-bold mb-4">Products</p>
                 <ul className="space-y-2 text-sm text-foreground/75">
@@ -1549,7 +1539,7 @@ function NavigationSection() {
                   </li>
                 </ul>
               </div>
-              <div>
+              <div className="hidden lg:block">
                 <p className="font-bold mb-4">Company</p>
                 <ul className="space-y-2 text-sm text-foreground/75">
                   <li>
@@ -1591,7 +1581,7 @@ function NavigationSection() {
                 <p className="text-sm text-foreground/75 mb-3">
                   Get the latest offers and eye care tips
                 </p>
-                <div className="flex gap-2">
+                <div className="flex flex-col gap-2">
                   <input
                     type="email"
                     placeholder="Email"
@@ -1747,9 +1737,9 @@ function FeedbackSection() {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Alerts</h2>
         <div className="space-y-4">
-          <div className="border-2 border-brand-purple/30 bg-brand-purple/10 rounded-lg p-4">
+          <div className="border-2 border-foreground/30 bg-foreground/10 rounded-lg p-4">
             <div className="flex items-start gap-3">
-              <Info className="w-5 h-5 text-brand-purple shrink-0 mt-0.5" />
+              <Info className="w-5 h-5 text-foreground shrink-0 mt-0.5" />
               <div>
                 <h4 className="font-bold mb-1">Information</h4>
                 <p className="text-sm text-foreground/75">
@@ -1759,11 +1749,11 @@ function FeedbackSection() {
             </div>
           </div>
 
-          <div className="border-2 border-brand-folly/30 bg-brand-folly/10 rounded-lg p-4">
+          <div className="border-2 border-brand-purple/30 bg-brand-purple/10 rounded-lg p-4">
             <div className="flex items-start gap-3">
-              <CheckCircle2 className="w-5 h-5 text-brand-folly shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-5 h-5 text-brand-purple shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-bold mb-1 text-brand-folly">Success</h4>
+                <h4 className="font-bold mb-1 text-brand-purple">Success</h4>
                 <p className="text-sm text-foreground/75">
                   Your order has been placed successfully
                 </p>
@@ -1973,7 +1963,7 @@ function DashboardSection() {
         <h2 className="text-2xl font-bold">Data Table</h2>
         <div className="border border-border rounded-lg overflow-hidden">
           <div className="overflow-x-auto">
-            <table className="w-full">
+            <table className="w-full min-w-[827px]">
               <thead className="bg-muted-light border-b border-border">
                 <tr>
                   <th className="text-left p-4 text-sm font-medium">
@@ -2003,7 +1993,7 @@ function DashboardSection() {
                   </td>
                   <td className="p-4 text-sm">Comprehensive Eye Exam</td>
                   <td className="p-4">
-                    <span className="px-2 py-1 bg-brand-folly/10 text-brand-folly rounded-full text-xs font-medium">
+                    <span className="px-2 py-1 bg-brand-purple/10 text-brand-purple rounded-full text-xs font-medium">
                       Completed
                     </span>
                   </td>
@@ -2072,14 +2062,14 @@ function DashboardSection() {
                   <td className="p-4 text-sm">Frame Selection</td>
                   <td className="p-4">
                     <span className="px-2 py-1 bg-brand-folly/10 text-brand-folly rounded-full text-xs font-medium">
-                      Completed
+                      Cancelled
                     </span>
                   </td>
                   <td className="p-4 text-sm font-medium">$89</td>
                   <td className="p-4">
                     <div className="flex items-center justify-end gap-2">
                       <button className="w-8 h-8 flex items-center justify-center hover:bg-muted-light rounded transition-colors">
-                        <Eye className="w-4 h-4" />
+                        <Symbol className="w-4 h-4" />
                       </button>
                       <button className="w-8 h-8 flex items-center justify-center hover:bg-muted-light rounded transition-colors">
                         <Edit className="w-4 h-4" />
@@ -2158,7 +2148,7 @@ function DashboardSection() {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Quick Actions Panel</h2>
         <div className="border border-border rounded-lg p-6">
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <button className="flex flex-col items-center gap-3 p-6 border border-border rounded-lg hover:bg-muted/50 transition-colors">
               <div className="w-12 h-12 rounded-lg bg-brand-orange/10 flex items-center justify-center">
                 <Plus className="w-6 h-6 text-brand-orange" />
@@ -2237,7 +2227,7 @@ function DashboardSection() {
       {/* Calendar Widget */}
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Calendar Widget</h2>
-        <div className="border border-border rounded-lg p-6">
+        <div className="border border-border max-w-110 rounded-lg p-6">
           {/* Header */}
           <div className="flex items-center justify-between mb-6">
             <h3 className="font-bold">{monthName}</h3>
