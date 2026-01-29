@@ -160,7 +160,7 @@ export function Button({
   const variants = {
     primary: 'bg-foreground text-background hover:opacity-90',
     secondary: 'border-2 border-foreground hover:bg-foreground hover:text-background',
-    gradient: 'bg-gradient-to-r from-[#CC33FF] via-[#FF004F] to-[#FF8000] text-white'
+    gradient: 'bg-gradient-to-r from-brand-purple via-brand-folly to-brand-orange text-white'
   };
   
   const sizes = {
@@ -305,8 +305,8 @@ function UsageGuidelines() {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Color Usage Rules</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="border-2 border-brand-folly/50 rounded-lg p-6 bg-brand-folly/5">
-            <div className="flex items-center gap-2 mb-4 text-brand-folly">
+          <div className="border-2 border-brand-purple/50 rounded-lg p-6 bg-brand-purple/5">
+            <div className="flex items-center gap-2 mb-4 text-brand-purple">
               <CheckCircle className="w-5 h-5" />
               <span className="font-bold">Do</span>
             </div>
@@ -344,8 +344,8 @@ function UsageGuidelines() {
               <p className="text-sm text-foreground/75">
                 Use 16px (1rem) or 24px (1.5rem) for internal spacing
               </p>
-              <div className="mt-2 p-4 bg-muted-light rounded border-4 border-[#CC33FF]/30">
-                <div className="bg-background p-4 rounded">Content</div>
+              <div className="mt-2 p-4 bg-muted-light hatch-brand-orange rounded border-2 border-brand-orange">
+                <div className="bg-background p-4 rounded border-2 border-brand-orange">Content</div>
               </div>
             </div>
             <div>

@@ -49,6 +49,7 @@ import {
   Grid3x3,
 } from "lucide-react";
 import Wordmark from "../../assets/wordmark";
+import Symbol from "../../assets/symbol";
 
 interface ComponentsSectionProps {
   activeSubSection: string;
@@ -282,7 +283,7 @@ function ButtonsSection() {
           </p>
         </div>
         <div className="border border-border rounded-lg p-6 space-y-4">
-          <button className="px-8 py-4 bg-gradient-to-r from-[#CC33FF] via-[#FF004F] to-[#FF8000] text-white rounded-lg font-bold text-lg">
+          <button className="px-8 py-4 bg-gradient-to-r from-brand-purple via-brand-folly to-brand-orange text-white rounded-lg font-bold text-lg">
             Start Your Eye Test
           </button>
           <p className="text-sm text-foreground/75">
@@ -341,7 +342,7 @@ function ButtonsSection() {
               title="Shopping Cart"
             >
               <ShoppingCart className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 w-5 h-5 bg-[#FF8000] text-white text-xs rounded-full flex items-center justify-center font-bold">
+              <span className="absolute -top-1 -right-1 w-5 h-5 bg-brand-orange text-white text-xs rounded-full flex items-center justify-center font-bold">
                 4
               </span>
             </button>
@@ -368,7 +369,7 @@ function ButtonsSection() {
               title="Notifications"
             >
               <Bell className="w-5 h-5" />
-              <span className="absolute -top-1 -right-1 w-2 h-2 bg-[#FF004F] rounded-full"></span>
+              <span className="absolute -top-1 -right-1 w-2 h-2 bg-brand-folly rounded-full"></span>
             </button>
             <button
               className="w-10 h-10 flex items-center justify-center bg-transparent hover:bg-muted-light rounded-lg transition-colors"
@@ -422,13 +423,13 @@ function ButtonsSection() {
               <Edit className="w-5 h-5" />
             </button>
             <button
-              className="w-10 h-10 flex items-center justify-center bg-[#FF004F] text-white hover:opacity-90 rounded-lg transition-opacity"
+              className="w-10 h-10 flex items-center justify-center bg-brand-folly text-white hover:opacity-90 rounded-lg transition-opacity"
               title="Delete"
             >
               <Trash2 className="w-5 h-5" />
             </button>
             <button
-              className="w-10 h-10 flex items-center justify-center bg-[#FF8000] text-white hover:opacity-90 rounded-lg transition-opacity"
+              className="w-10 h-10 flex items-center justify-center bg-brand-orange text-white hover:opacity-90 rounded-lg transition-opacity"
               title="Download"
             >
               <Download className="w-5 h-5" />
@@ -458,7 +459,7 @@ function ButtonsSection() {
               <RefreshCw className="w-5 h-5" />
             </button>
             <button
-              className="w-10 h-10 flex items-center justify-center bg-[#CC33FF] text-white hover:opacity-90 rounded-lg transition-opacity"
+              className="w-10 h-10 flex items-center justify-center bg-brand-purple text-white hover:opacity-90 rounded-lg transition-opacity"
               title="Save"
             >
               <Save className="w-5 h-5" />
@@ -589,19 +590,19 @@ function ButtonsSection() {
               <LogIn className="w-5 h-5" />
             </button>
             <button
-              className="w-12 h-12 flex items-center justify-center bg-[#FF004F] text-white hover:opacity-90 rounded-full transition-opacity"
+              className="w-12 h-12 flex items-center justify-center bg-brand-folly text-white hover:opacity-90 rounded-full transition-opacity"
               title="Log Out"
             >
               <LogOut className="w-5 h-5" />
             </button>
             <button
-              className="w-12 h-12 flex items-center justify-center bg-[#FF8000] text-white hover:opacity-90 rounded-full transition-opacity"
+              className="w-12 h-12 flex items-center justify-center bg-brand-orange text-white hover:opacity-90 rounded-full transition-opacity"
               title="Help"
             >
               <HelpCircle className="w-5 h-5" />
             </button>
             <button
-              className="w-12 h-12 flex items-center justify-center bg-[#CC33FF] text-white hover:opacity-90 rounded-full transition-opacity"
+              className="w-12 h-12 flex items-center justify-center bg-brand-purple text-white hover:opacity-90 rounded-full transition-opacity"
               title="Grid View"
             >
               <Grid3x3 className="w-5 h-5" />
@@ -610,7 +611,7 @@ function ButtonsSection() {
               className="w-12 h-12 flex items-center justify-center bg-transparent border-2 border-foreground hover:bg-foreground hover:text-background rounded-full transition-all"
               title="Eye"
             >
-              <Eye className="w-5 h-5" />
+              <Symbol className="w-5 h-5" />
             </button>
             <button
               className="w-12 h-12 flex items-center justify-center bg-transparent border-2 border-foreground hover:bg-foreground hover:text-background rounded-full transition-all"
@@ -772,7 +773,7 @@ function InputsSection() {
               min="0"
               max="100"
               defaultValue="50"
-              className="w-full h-2 bg-muted-light rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#FF8000] [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-[#FF8000] [&::-moz-range-thumb]:border-0"
+              className="w-full h-2 bg-muted-light rounded-lg appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-brand-orange [&::-moz-range-thumb]:w-4 [&::-moz-range-thumb]:h-4 [&::-moz-range-thumb]:rounded-full [&::-moz-range-thumb]:bg-brand-orange [&::-moz-range-thumb]:border-0"
             />
             <p className="text-xs text-foreground/75">
               Adjust the slider (0-100)
@@ -1220,7 +1221,7 @@ function NavigationSection() {
                 </button>
                 <button className="w-10 h-10 flex items-center justify-center hover:bg-muted-light rounded-lg relative transition-colors">
                   <ShoppingCart className="w-5 h-5" />
-                  <span className="absolute top-1 right-1 w-4 h-4 bg-[#FF8000] text-white text-xs rounded-full flex items-center justify-center font-bold">
+                  <span className="absolute top-1 right-1 w-4 h-4 bg-brand-orange text-white text-xs rounded-full flex items-center justify-center font-bold">
                     4
                   </span>
                 </button>
@@ -1245,7 +1246,7 @@ function NavigationSection() {
               <div className="flex items-center gap-2">
                 <button className="w-9 h-9 flex items-center justify-center hover:bg-muted-light rounded-lg relative transition-colors">
                   <ShoppingCart className="w-4 h-4" />
-                  <span className="absolute top-0 right-0 w-4 h-4 bg-[#FF8000] text-white text-xs rounded-full flex items-center justify-center font-bold">
+                  <span className="absolute top-0 right-0 w-4 h-4 bg-brand-orange text-white text-xs rounded-full flex items-center justify-center font-bold">
                     4
                   </span>
                 </button>
@@ -1342,7 +1343,7 @@ function NavigationSection() {
                 href="#"
                 className="flex items-center gap-3 px-3 py-2 hover:bg-muted-light rounded-lg transition-colors"
               >
-                <Eye className="w-4 h-4" />
+                <Symbol className="w-4 h-4" />
                 <span className="text-sm">Eye Tests</span>
               </a>
               <a
@@ -1639,7 +1640,7 @@ function CardsSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
             <div className="aspect-square bg-muted-light flex items-center justify-center">
-              <Eye className="w-16 h-16 text-foreground/75" />
+              <Symbol className="w-16 h-16 text-foreground/75" />
             </div>
             <div className="p-4">
               <h3 className="font-bold mb-1">Classic Round Frames</h3>
@@ -1656,7 +1657,7 @@ function CardsSection() {
           </div>
           <div className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
             <div className="aspect-square bg-muted-light flex items-center justify-center">
-              <Eye className="w-16 h-16 text-foreground/75" />
+              <Symbol className="w-16 h-16 text-foreground/75" />
             </div>
             <div className="p-4">
               <h3 className="font-bold mb-1">Aviator Sunglasses</h3>
@@ -1673,7 +1674,7 @@ function CardsSection() {
           </div>
           <div className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
             <div className="aspect-square bg-muted-light flex items-center justify-center">
-              <Eye className="w-16 h-16 text-foreground/75" />
+              <Symbol className="w-16 h-16 text-foreground/75" />
             </div>
             <div className="p-4">
               <h3 className="font-bold mb-1">Blue Light Blockers</h3>
@@ -1718,7 +1719,7 @@ function CardsSection() {
               className="border border-border rounded-lg p-6 text-center"
             >
               <div className="w-12 h-12 rounded-full bg-muted-light flex items-center justify-center mx-auto mb-4">
-                <Eye className="w-6 h-6" />
+                <Symbol className="w-6 h-6" />
               </div>
               <h3 className="font-bold mb-2">{feature.title}</h3>
               <p className="text-sm text-foreground/75">
@@ -1746,9 +1747,9 @@ function FeedbackSection() {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Alerts</h2>
         <div className="space-y-4">
-          <div className="border-2 border-[#CC33FF]/30 bg-[#CC33FF]/10 rounded-lg p-4">
+          <div className="border-2 border-brand-purple/30 bg-brand-purple/10 rounded-lg p-4">
             <div className="flex items-start gap-3">
-              <Info className="w-5 h-5 text-[#CC33FF] shrink-0 mt-0.5" />
+              <Info className="w-5 h-5 text-brand-purple shrink-0 mt-0.5" />
               <div>
                 <h4 className="font-bold mb-1">Information</h4>
                 <p className="text-sm text-foreground/75">
@@ -1770,11 +1771,11 @@ function FeedbackSection() {
             </div>
           </div>
 
-          <div className="border-2 border-[#FF8000]/30 bg-[#FF8000]/10 rounded-lg p-4">
+          <div className="border-2 border-brand-orange/30 bg-brand-orange/10 rounded-lg p-4">
             <div className="flex items-start gap-3">
-              <AlertCircle className="w-5 h-5 text-[#FF8000] shrink-0 mt-0.5" />
+              <AlertCircle className="w-5 h-5 text-brand-orange shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-bold mb-1 text-[#FF8000]">Warning</h4>
+                <h4 className="font-bold mb-1 text-brand-orange">Warning</h4>
                 <p className="text-sm text-foreground/75">
                   Your cart will expire in 15 minutes
                 </p>
@@ -1782,11 +1783,11 @@ function FeedbackSection() {
             </div>
           </div>
 
-          <div className="border-2 border-[#FF004F]/30 bg-[#FF004F]/10 rounded-lg p-4">
+          <div className="border-2 border-brand-folly/30 bg-brand-folly/10 rounded-lg p-4">
             <div className="flex items-start gap-3">
-              <XCircle className="w-5 h-5 text-[#FF004F] shrink-0 mt-0.5" />
+              <XCircle className="w-5 h-5 text-brand-folly shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-bold mb-1 text-[#FF004F]">Error</h4>
+                <h4 className="font-bold mb-1 text-brand-folly">Error</h4>
                 <p className="text-sm text-foreground/75">
                   Payment failed. Please check your card details
                 </p>
@@ -1804,10 +1805,10 @@ function FeedbackSection() {
             <span className="px-3 py-1 bg-foreground text-background rounded-full text-sm font-medium">
               New
             </span>
-            <span className="px-3 py-1 bg-[#FF004F] text-white rounded-full text-sm font-medium">
+            <span className="px-3 py-1 bg-brand-folly text-white rounded-full text-sm font-medium">
               Sale
             </span>
-            <span className="px-3 py-1 bg-[#FF8000] text-white rounded-full text-sm font-medium">
+            <span className="px-3 py-1 bg-brand-orange text-white rounded-full text-sm font-medium">
               Popular
             </span>
             <span className="px-3 py-1 bg-muted-light text-foreground rounded-full text-sm font-medium">
@@ -1837,17 +1838,13 @@ function FeedbackSection() {
         </div>
 
         <div className="border border-border justify-items-center rounded-lg p-6">
-          <img
-            alt="symbol loading"
-            width={50}
-            src="src/assets/symbol_loading.svg"
-          />
+          <Symbol className="w-16 h-16 fill-[#808080] stroke-none animate-pulse" />
         </div>
 
         <div className="border border-border justify-items-center rounded-lg p-6">
           <img
             alt="wordmark loading"
-            width={500}
+            className="w-full h-auto"
             src="src/assets/wordmark_loading.svg"
           />
         </div>
@@ -1919,11 +1916,11 @@ function DashboardSection() {
       {/* Stat Cards / KPI Cards */}
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">KPI / Stat Cards</h2>
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="border border-border rounded-lg p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="w-10 h-10 rounded-lg bg-[#FF8000]/10 flex items-center justify-center">
-                <User className="w-5 h-5 text-[#FF8000]" />
+              <div className="w-10 h-10 rounded-lg bg-brand-orange/10 flex items-center justify-center">
+                <User className="w-5 h-5 text-brand-orange" />
               </div>
               <span className="text-xs px-2 py-1 bg-brand-folly/10 text-brand-folly rounded-full font-medium">
                 +12%
@@ -1934,8 +1931,8 @@ function DashboardSection() {
           </div>
           <div className="border border-border rounded-lg p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="w-10 h-10 rounded-lg bg-[#CC33FF]/10 flex items-center justify-center">
-                <Calendar className="w-5 h-5 text-[#CC33FF]" />
+              <div className="w-10 h-10 rounded-lg bg-brand-purple/10 flex items-center justify-center">
+                <Calendar className="w-5 h-5 text-brand-purple" />
               </div>
               <span className="text-xs px-2 py-1 bg-brand-folly/10 text-brand-folly rounded-full font-medium">
                 +8%
@@ -1946,10 +1943,10 @@ function DashboardSection() {
           </div>
           <div className="border border-border rounded-lg p-6">
             <div className="flex items-center justify-between mb-4">
-              <div className="w-10 h-10 rounded-lg bg-[#FF004F]/10 flex items-center justify-center">
-                <Eye className="w-5 h-5 text-[#FF004F]" />
+              <div className="w-10 h-10 rounded-lg bg-brand-folly/10 flex items-center justify-center">
+                <Symbol className="w-5 h-5 text-brand-folly" />
               </div>
-              <span className="text-xs px-2 py-1 bg-[#FF004F]/10 text-[#FF004F] rounded-full font-medium">
+              <span className="text-xs px-2 py-1 bg-brand-folly/10 text-brand-folly rounded-full font-medium">
                 -3%
               </span>
             </div>
@@ -1995,7 +1992,7 @@ function DashboardSection() {
                 <tr className="hover:bg-muted/20 transition-colors">
                   <td className="p-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-[#FF8000]/10 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-full bg-brand-orange/10 flex items-center justify-center">
                         <span className="text-sm font-medium">JD</span>
                       </div>
                       <span className="text-sm font-medium">John Doe</span>
@@ -2014,7 +2011,7 @@ function DashboardSection() {
                   <td className="p-4">
                     <div className="flex items-center justify-end gap-2">
                       <button className="w-8 h-8 flex items-center justify-center hover:bg-muted-light rounded transition-colors">
-                        <Eye className="w-4 h-4" />
+                        <Symbol className="w-4 h-4" />
                       </button>
                       <button className="w-8 h-8 flex items-center justify-center hover:bg-muted-light rounded transition-colors">
                         <Edit className="w-4 h-4" />
@@ -2028,7 +2025,7 @@ function DashboardSection() {
                 <tr className="hover:bg-muted/20 transition-colors">
                   <td className="p-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-[#CC33FF]/10 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-full bg-brand-purple/10 flex items-center justify-center">
                         <span className="text-sm font-medium">SA</span>
                       </div>
                       <span className="text-sm font-medium">
@@ -2041,7 +2038,7 @@ function DashboardSection() {
                   </td>
                   <td className="p-4 text-sm">Contact Lens Fitting</td>
                   <td className="p-4">
-                    <span className="px-2 py-1 bg-[#FF8000]/10 text-[#FF8000] rounded-full text-xs font-medium">
+                    <span className="px-2 py-1 bg-brand-orange/10 text-brand-orange rounded-full text-xs font-medium">
                       Pending
                     </span>
                   </td>
@@ -2049,7 +2046,7 @@ function DashboardSection() {
                   <td className="p-4">
                     <div className="flex items-center justify-end gap-2">
                       <button className="w-8 h-8 flex items-center justify-center hover:bg-muted-light rounded transition-colors">
-                        <Eye className="w-4 h-4" />
+                        <Symbol className="w-4 h-4" />
                       </button>
                       <button className="w-8 h-8 flex items-center justify-center hover:bg-muted-light rounded transition-colors">
                         <Edit className="w-4 h-4" />
@@ -2063,7 +2060,7 @@ function DashboardSection() {
                 <tr className="hover:bg-muted/20 transition-colors">
                   <td className="p-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 rounded-full bg-[#FF004F]/10 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-full bg-brand-folly/10 flex items-center justify-center">
                         <span className="text-sm font-medium">MB</span>
                       </div>
                       <span className="text-sm font-medium">Michael Brown</span>
@@ -2106,8 +2103,8 @@ function DashboardSection() {
           <div className="space-y-6">
             <div className="flex gap-4">
               <div className="flex flex-col items-center">
-                <div className="w-10 h-10 rounded-full bg-[#FF8000]/10 flex items-center justify-center shrink-0">
-                  <Calendar className="w-5 h-5 text-[#FF8000]" />
+                <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center shrink-0">
+                  <Calendar className="w-5 h-5 text-brand-orange" />
                 </div>
                 <div className="w-px h-full bg-border mt-2" />
               </div>
@@ -2138,8 +2135,8 @@ function DashboardSection() {
             </div>
             <div className="flex gap-4">
               <div className="flex flex-col items-center">
-                <div className="w-10 h-10 rounded-full bg-[#CC33FF]/10 flex items-center justify-center shrink-0">
-                  <Mail className="w-5 h-5 text-[#CC33FF]" />
+                <div className="w-10 h-10 rounded-full bg-brand-purple/10 flex items-center justify-center shrink-0">
+                  <Mail className="w-5 h-5 text-brand-purple" />
                 </div>
               </div>
               <div>
@@ -2163,20 +2160,20 @@ function DashboardSection() {
         <div className="border border-border rounded-lg p-6">
           <div className="grid grid-cols-4 gap-4">
             <button className="flex flex-col items-center gap-3 p-6 border border-border rounded-lg hover:bg-muted/50 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-[#FF8000]/10 flex items-center justify-center">
-                <Plus className="w-6 h-6 text-[#FF8000]" />
+              <div className="w-12 h-12 rounded-lg bg-brand-orange/10 flex items-center justify-center">
+                <Plus className="w-6 h-6 text-brand-orange" />
               </div>
               <span className="text-sm font-medium">New Appointment</span>
             </button>
             <button className="flex flex-col items-center gap-3 p-6 border border-border rounded-lg hover:bg-muted/50 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-[#CC33FF]/10 flex items-center justify-center">
-                <User className="w-6 h-6 text-[#CC33FF]" />
+              <div className="w-12 h-12 rounded-lg bg-brand-purple/10 flex items-center justify-center">
+                <User className="w-6 h-6 text-brand-purple" />
               </div>
               <span className="text-sm font-medium">Add Patient</span>
             </button>
             <button className="flex flex-col items-center gap-3 p-6 border border-border rounded-lg hover:bg-muted/50 transition-colors">
-              <div className="w-12 h-12 rounded-lg bg-[#FF004F]/10 flex items-center justify-center">
-                <Eye className="w-6 h-6 text-[#FF004F]" />
+              <div className="w-12 h-12 rounded-lg bg-brand-folly/10 flex items-center justify-center">
+                <Eye className="w-6 h-6 text-brand-folly" />
               </div>
               <span className="text-sm font-medium">Eye Test</span>
             </button>
@@ -2205,11 +2202,11 @@ function DashboardSection() {
                   </span>
                 </p>
               </div>
-              <span className="text-sm font-medium text-[#FF8000]">97%</span>
+              <span className="text-sm font-medium text-brand-orange">97%</span>
             </div>
             <div className="w-full h-2 bg-muted-light rounded-full overflow-hidden">
               <div
-                className="h-full bg-[#FF8000] rounded-full"
+                className="h-full bg-brand-orange rounded-full"
                 style={{ width: "97%" }}
               />
             </div>
@@ -2225,11 +2222,11 @@ function DashboardSection() {
                   </span>
                 </p>
               </div>
-              <span className="text-sm font-medium text-[#CC33FF]">85%</span>
+              <span className="text-sm font-medium text-brand-purple">85%</span>
             </div>
             <div className="w-full h-2 bg-muted-light rounded-full overflow-hidden">
               <div
-                className="h-full bg-[#CC33FF] rounded-full"
+                className="h-full bg-brand-purple rounded-full"
                 style={{ width: "85%" }}
               />
             </div>
@@ -2296,7 +2293,7 @@ function DashboardSection() {
                 >
                   {day}
                   {appointment && !isToday && (
-                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#FF8000]" />
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-brand-orange" />
                   )}
                 </button>
               );
@@ -2311,7 +2308,7 @@ function DashboardSection() {
         <div className="border border-border rounded-lg divide-y divide-border">
           <div className="p-4 flex items-center justify-between hover:bg-muted/20 transition-colors">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#FF8000]/10 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center">
                 <span className="font-medium">DR</span>
               </div>
               <div>
@@ -2331,7 +2328,7 @@ function DashboardSection() {
           </div>
           <div className="p-4 flex items-center justify-between hover:bg-muted/20 transition-colors">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#CC33FF]/10 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-brand-purple/10 flex items-center justify-center">
                 <span className="font-medium">JM</span>
               </div>
               <div>
@@ -2340,8 +2337,8 @@ function DashboardSection() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <span className="flex items-center gap-2 px-3 py-1 bg-[#FF8000]/10 text-[#FF8000] rounded-full text-xs font-medium">
-                <span className="w-2 h-2 bg-[#FF8000] rounded-full" />
+              <span className="flex items-center gap-2 px-3 py-1 bg-brand-orange/10 text-brand-orange rounded-full text-xs font-medium">
+                <span className="w-2 h-2 bg-brand-orange rounded-full" />
                 Busy
               </span>
               <button className="w-8 h-8 flex items-center justify-center hover:bg-muted-light rounded transition-colors">
@@ -2351,7 +2348,7 @@ function DashboardSection() {
           </div>
           <div className="p-4 flex items-center justify-between hover:bg-muted/20 transition-colors">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#FF004F]/10 flex items-center justify-center">
+              <div className="w-10 h-10 rounded-full bg-brand-folly/10 flex items-center justify-center">
                 <span className="font-medium">EW</span>
               </div>
               <div>
@@ -2378,14 +2375,14 @@ function DashboardSection() {
         <div className="border border-border rounded-lg">
           <div className="p-4 border-b border-border flex items-center justify-between">
             <h3 className="font-bold">Notifications</h3>
-            <button className="text-sm text-[#FF8000] hover:underline">
+            <button className="text-sm text-brand-orange hover:underline">
               Mark all as read
             </button>
           </div>
           <div className="divide-y divide-border">
-            <div className="p-4 hover:bg-muted/20 transition-colors cursor-pointer bg-[#FF8000]/5">
+            <div className="p-4 hover:bg-muted/20 transition-colors cursor-pointer bg-brand-orange/5">
               <div className="flex gap-3">
-                <div className="w-2 h-2 rounded-full bg-[#FF8000] mt-1.5 shrink-0" />
+                <div className="w-2 h-2 rounded-full bg-brand-orange mt-1.5 shrink-0" />
                 <div className="flex-1">
                   <p className="font-medium mb-1">New appointment request</p>
                   <p className="text-sm text-foreground/75 mb-2">

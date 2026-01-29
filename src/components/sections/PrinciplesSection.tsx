@@ -132,7 +132,7 @@ export function PrinciplesSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="border border-border rounded-lg p-6 space-y-4">
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-[#CC33FF]" />
+              <CheckCircle className="w-5 h-5 text-brand-purple" />
               <h3 className="font-bold">Color Contrast</h3>
             </div>
             <p className="text-sm text-foreground/75">
@@ -141,22 +141,22 @@ export function PrinciplesSection() {
             <div className="space-y-2 text-sm">
               <div className="flex justify-between items-center p-2 bg-white rounded border">
                 <span className="text-black">Black on White</span>
-                <span className="text-[#CC33FF] font-mono">21:1 ✓</span>
+                <span className="text-brand-purple font-mono">21:1 ✓</span>
               </div>
               <div className="flex justify-between items-center p-2 bg-[#121212] rounded">
                 <span className="text-[#F5F5F5]">Off-white on Dark Gray</span>
-                <span className="text-[#CC33FF] font-mono">18.5:1 ✓</span>
+                <span className="text-brand-purple font-mono">18.5:1 ✓</span>
               </div>
               <div className="flex justify-between items-center p-2 bg-white rounded border">
                 <span className="text-[#808080]">Gray on White</span>
-                <span className="text-[#CC33FF] font-mono">4.6:1 ✓</span>
+                <span className="text-brand-purple font-mono">4.6:1 ✓</span>
               </div>
             </div>
           </div>
 
           <div className="border border-border rounded-lg p-6 space-y-4">
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-[#CC33FF]" />
+              <CheckCircle className="w-5 h-5 text-brand-purple" />
               <h3 className="font-bold">Keyboard Navigation</h3>
             </div>
             <p className="text-sm text-foreground/75">
@@ -207,7 +207,7 @@ export function PrinciplesSection() {
 
           <div className="border border-border rounded-lg p-6 space-y-4">
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-[#CC33FF]" />
+              <CheckCircle className="w-5 h-5 text-brand-purple" />
               <h3 className="font-bold">Screen Readers</h3>
             </div>
             <p className="text-sm text-foreground/75">
@@ -224,14 +224,14 @@ export function PrinciplesSection() {
 
           <div className="border border-border rounded-lg p-6 space-y-4">
             <div className="flex items-center gap-2">
-              <CheckCircle className="w-5 h-5 text-[#CC33FF]" />
+              <CheckCircle className="w-5 h-5 text-brand-purple" />
               <h3 className="font-bold">Touch Targets</h3>
             </div>
             <p className="text-sm text-foreground/75">
               Minimum 44×44px for mobile interactions
             </p>
             <div className="flex items-center gap-4 mt-4">
-              <div className="w-11 h-11 border-2 border-[#CC33FF] rounded flex items-center justify-center">
+              <div className="w-11 h-11 border-2 border-brand-purple rounded flex items-center justify-center">
                 <span className="text-xs font-mono">44px</span>
               </div>
               <p className="text-xs text-foreground/75">

@@ -813,8 +813,8 @@ function CombinedMarks() {
       <section className="space-y-4">
         <h3 className="text-xl font-bold">When to Use Combined Marks</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="border-2 border-[#CC33FF]/50 rounded-lg p-6 bg-[#CC33FF]/5">
-            <div className="flex items-center gap-2 mb-4 text-[#CC33FF]">
+          <div className="border-2 border-brand-purple/50 rounded-lg p-6 bg-brand-purple/5">
+            <div className="flex items-center gap-2 mb-4 text-brand-purple">
               <CheckCircle className="w-5 h-5" />
               <span className="font-bold">Appropriate Uses</span>
             </div>
@@ -859,8 +859,8 @@ function UsageGuidelines() {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Correct Usage</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="border-2 border-brand-folly/50 rounded-lg p-6 bg-brand-folly/5">
-            <div className="flex items-center gap-2 mb-4 text-brand-folly">
+          <div className="border-2 border-brand-purple/50 rounded-lg p-6 bg-brand-purple/5">
+            <div className="flex items-center gap-2 mb-4 text-brand-purple">
               <CheckCircle className="w-5 h-5" />
               <span className="font-bold">Do</span>
             </div>
@@ -977,7 +977,7 @@ function UsageGuidelines() {
                 Don't Use on Busy Backgrounds
               </span>
             </div>
-            <div className="bg-gradient-to-r from-[#CC33FF] via-[#FF004F] to-[#FF8000] rounded p-4 flex items-center justify-center">
+            <div className="bg-gradient-to-r from-brand-purple via-brand-folly to-brand-orange rounded p-4 flex items-center justify-center">
               <Wordmark className="fill-[#808080] stroke-none w-25" />
             </div>
           </div>
@@ -988,7 +988,7 @@ function UsageGuidelines() {
               <span className="font-bold text-sm">Don't Change Colors</span>
             </div>
             <div className="bg-background/50 rounded p-4 flex items-center justify-center">
-              <Wordmark className="fill-[#FF004F] stroke-none w-25" />
+              <Wordmark className="fill-brand-folly stroke-none w-25" />
             </div>
           </div>
 

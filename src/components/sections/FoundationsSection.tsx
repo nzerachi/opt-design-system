@@ -134,21 +134,21 @@ function ColorSystem() {
       name: "Orange",
       hex: "#FF8000",
       rgb: "255, 128, 0",
-      class: "bg-[#FF8000]",
+      class: "bg-brand-orange",
       usage: "CTAs, highlights",
     },
     {
       name: "Folly",
       hex: "#FF004F",
       rgb: "255, 0, 119",
-      class: "bg-[#FF004F]",
+      class: "bg-brand-folly",
       usage: "Alerts, emphasis",
     },
     {
       name: "Neon Purple",
       hex: "#CC33FF",
       rgb: "255, 0, 247",
-      class: "bg-[#CC33FF]",
+      class: "bg-brand-purple",
       usage: "Special features, success states",
     },
   ];
@@ -231,11 +231,11 @@ function ColorSystem() {
           ))}
         </div>
 
-        <div className="bg-[#FF8000]/10 border-2 border-[#FF8000]/30 rounded-lg p-6">
+        <div className="bg-brand-orange/10 border-2 border-brand-orange/30 rounded-lg p-6">
           <div className="flex items-start gap-3">
-            <AlertCircle className="w-6 h-6 text-[#FF8000] shrink-0 mt-0.5" />
+            <AlertCircle className="w-6 h-6 text-brand-orange shrink-0 mt-0.5" />
             <div>
-              <h3 className="font-bold text-[#FF8000] mb-2">
+              <h3 className="font-bold text-brand-orange mb-2">
                 Accent Color Guidelines
               </h3>
               <p className="text-sm text-foreground/75">
@@ -257,7 +257,7 @@ function ColorSystem() {
           </p>
         </div>
         <div className="border border-border rounded-lg overflow-hidden">
-          <div className="bg-gradient-to-r from-[#CC33FF] via-[#FF004F] to-[#FF8000] p-12">
+          <div className="bg-gradient-to-r from-brand-purple via-brand-folly to-brand-orange p-12">
             <div className="text-center text-white">
               <h3 className="text-2xl font-bold mb-2">Premium Gradient</h3>
               <p className="text-white/90">
@@ -275,8 +275,8 @@ function ColorSystem() {
             <div>
               <p className="text-sm text-foreground/75 mb-2">Tailwind</p>
               <code className="text-xs bg-background px-3 py-2 rounded block font-mono">
-                className="bg-gradient-to-r from-[#CC33FF] via-[#FF004F]
-                to-[#FF8000]"
+                className="bg-gradient-to-r from-brand-purple via-brand-folly
+                to-brand-orange"
               </code>
             </div>
           </div>
@@ -315,7 +315,7 @@ function ColorSystem() {
               <span className="text-black font-medium">
                 Black text on White background
               </span>
-              <span className="text-sm font-mono text-[#CC33FF]">
+              <span className="text-sm font-mono text-brand-purple">
                 21:1 ✓ AAA
               </span>
             </div>
@@ -323,7 +323,7 @@ function ColorSystem() {
               <span className="text-[#e6e6e6] font-medium">
                 Light Gray text on Dark Gray
               </span>
-              <span className="text-sm font-mono text-[#CC33FF]">
+              <span className="text-sm font-mono text-brand-purple">
                 18.5:1 ✓ AAA
               </span>
             </div>
@@ -331,21 +331,23 @@ function ColorSystem() {
               <span className="text-[#808080] font-medium">
                 Gray text on White background
               </span>
-              <span className="text-sm font-mono text-[#CC33FF]">
+              <span className="text-sm font-mono text-brand-purple">
                 4.6:1 ✓ AA
               </span>
             </div>
             <div className="flex items-center justify-between p-4 bg-black rounded-lg">
-              <span className="text-[#FF8000] font-medium">
+              <span className="text-brand-orange font-medium">
                 Orange on Black
               </span>
-              <span className="text-sm font-mono text-[#CC33FF]">
+              <span className="text-sm font-mono text-brand-purple">
                 9.8:1 ✓ AAA
               </span>
             </div>
             <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200">
-              <span className="text-[#FF004F] font-medium">Folly on White</span>
-              <span className="text-sm font-mono text-[#CC33FF]">
+              <span className="text-brand-folly font-medium">
+                Folly on White
+              </span>
+              <span className="text-sm font-mono text-brand-purple">
                 5.2:1 ✓ AA
               </span>
             </div>
@@ -357,8 +359,8 @@ function ColorSystem() {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Color Usage Guidelines</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="border-2 border-[#CC33FF]/50 rounded-lg p-6 bg-[#CC33FF]/5">
-            <div className="flex items-center gap-2 mb-4 text-[#CC33FF]">
+          <div className="border-2 border-brand-purple/50 rounded-lg p-6 bg-brand-purple/5">
+            <div className="flex items-center gap-2 mb-4 text-brand-purple">
               <CheckCircle className="w-5 h-5" />
               <span className="font-bold">Do</span>
             </div>
@@ -612,8 +614,8 @@ function Typography() {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Typography Guidelines</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="border-2 border-[#CC33FF]/50 rounded-lg p-6 bg-[#CC33FF]/5">
-            <div className="flex items-center gap-2 mb-4 text-[#CC33FF]">
+          <div className="border-2 border-brand-purple/50 rounded-lg p-6 bg-brand-purple/5">
+            <div className="flex items-center gap-2 mb-4 text-brand-purple">
               <CheckCircle className="w-5 h-5" />
               <span className="font-bold">Do</span>
             </div>
@@ -911,8 +913,8 @@ function Iconography() {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Icon Usage Guidelines</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="border-2 border-[#CC33FF]/50 rounded-lg p-6 bg-[#CC33FF]/5">
-            <div className="flex items-center gap-2 mb-4 text-[#CC33FF]">
+          <div className="border-2 border-brand-purple/50 rounded-lg p-6 bg-brand-purple/5">
+            <div className="flex items-center gap-2 mb-4 text-brand-purple">
               <CheckCircle className="w-5 h-5" />
               <span className="font-bold">Do</span>
             </div>
@@ -957,7 +959,7 @@ function Iconography() {
 <Eye className="w-5 h-5" />
 
 // With color
-<Eye className="w-5 h-5 text-[#CC33FF]" />
+<Eye className="w-5 h-5 text-brand-purple" />
 
 // In a button
 <button className="flex items-center gap-2">
@@ -1205,8 +1207,8 @@ function Imagery() {
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Photography Guidelines</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="border-2 border-[#CC33FF]/50 rounded-lg p-6 bg-[#CC33FF]/5">
-            <div className="flex items-center gap-2 mb-4 text-[#CC33FF]">
+          <div className="border-2 border-brand-purple/50 rounded-lg p-6 bg-brand-purple/5">
+            <div className="flex items-center gap-2 mb-4 text-brand-purple">
               <CheckCircle className="w-5 h-5" />
               <span className="font-bold">Do</span>
             </div>
@@ -1320,7 +1322,7 @@ function SpacingGrid() {
               <div key={size} className="flex items-center gap-6">
                 <div className="w-24 text-sm font-mono">{size}px</div>
                 <div
-                  className="h-8 bg-[#CC33FF]"
+                  className="h-8 bg-brand-purple"
                   style={{ width: `${size}px` }}
                 />
                 <div className="text-sm text-foreground/75">{size / 16}rem</div>
@@ -1413,7 +1415,7 @@ function SpacingGrid() {
             {Array.from({ length: 12 }).map((_, i) => (
               <div
                 key={i}
-                className="bg-[#CC33FF]/20 h-12 flex items-center justify-center text-xs font-mono"
+                className="bg-brand-purple/20 h-12 flex items-center justify-center text-xs font-mono"
               >
                 {i + 1}
               </div>

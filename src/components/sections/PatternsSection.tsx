@@ -1,3 +1,4 @@
+import Symbol from "@/assets/symbol";
 import { Eye, Search, ShoppingCart } from "lucide-react";
 
 interface PatternsSectionProps {
@@ -57,14 +58,14 @@ function LayoutPatterns() {
           </p>
         </div>
         <div className="border border-border rounded-lg p-8">
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid  grid-cols-2 md:grid-cols-4 gap-4">
             {[1, 2, 3, 4].map((i) => (
               <div
                 key={i}
                 className="border border-border rounded-lg p-6 text-center"
               >
                 <div className="w-12 h-12 rounded-full bg-muted-light flex items-center justify-center mx-auto mb-3">
-                  <Eye className="w-6 h-6" />
+                  <Symbol className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-sm mb-1">Feature {i}</h3>
                 <p className="text-xs text-foreground/75">Description here</p>
@@ -83,17 +84,19 @@ function LayoutPatterns() {
         <div className="border border-border rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
             <div className="bg-muted-light aspect-square flex items-center justify-center">
-              <Eye className="w-24 h-24 text-foreground/75" />
+              <Symbol className="w-24 h-24 text-foreground/75" />
             </div>
             <div className="p-8 flex flex-col justify-center">
               <h3 className="text-2xl font-bold mb-4">About Our Lenses</h3>
               <p className="text-foreground/75 mb-6">
-                ...with an approximate of <strong>576 mega pixels</strong>, your
-                eyes are so
-                <em className="text-[#FF004F] not-italic"> powerful </em> it
-                takes
-                <em className="text-[#FF004F] not-italic"> billions </em>
-                around you to send visual data to your brain.
+                ...with approximately <strong>576 megapixels</strong>, your eyes
+                are so
+                <em className="text-brand-folly not-italic"> powerful </em> that
+                <em className="text-brand-folly not-italic">
+                  {" "}
+                  millions of photoreceptors{" "}
+                </em>
+                send visual data to your brain.
               </p>
               <button className="px-6 py-3 bg-foreground text-background rounded-lg font-medium self-start">
                 Learn More
@@ -276,10 +279,10 @@ function FunctionalPatterns() {
               <input
                 type="tel"
                 value="123"
-                className="w-full px-4 py-3 bg-input-background border-2 border-[#FF004F] rounded-lg"
+                className="w-full px-4 py-3 bg-input-background border-2 border-brand-folly rounded-lg"
                 readOnly
               />
-              <p className="text-xs text-[#FF004F] flex items-center gap-1">
+              <p className="text-xs text-brand-folly flex items-center gap-1">
                 <svg
                   className="w-3 h-3"
                   fill="currentColor"

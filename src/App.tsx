@@ -290,7 +290,7 @@ export default function App() {
               >
                 <ChevronLeft className="w-10 h-14 shrink-0 -ml-4" />
                 <div>
-                  <span className="text-sm text-foreground font-medium tracking-wider flex items-center group-hover:text-foreground">
+                  <span className="text-sm text-foreground font-medium tracking-wider flex items-center group-hover:text-foreground underline">
                     Previous
                   </span>
                   <div className="flex flex-col">
@@ -316,7 +316,7 @@ export default function App() {
                 className="group flex flex-row items-end px-4 py-3 rounded-lg hover:bg-muted/50 transition-colors text-right border border-transparent hover:border-border max-w-[45%]"
               >
                 <div>
-                  <span className="text-sm text-foreground justify-end font-medium tracking-wider flex items-center group-hover:text-foreground">
+                  <span className="text-sm text-foreground justify-end font-medium tracking-wider flex items-center group-hover:text-foreground underline">
                     Next
                   </span>
                   <div className="flex flex-col">

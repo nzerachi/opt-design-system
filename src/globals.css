@@ -119,8 +119,8 @@
   --breakpoint-md2: 900px;
 
   /* Custom Brand Colors (Hex codes are safe) */
-  --color-brand-purple: #ff004f;
-  --color-brand-folly: #cc33ff;
+  --color-brand-purple: #cc33ff;
+  --color-brand-folly: #ff004f;
   --color-brand-orange: #ff8000;
 
   /* Semantic Colors (The Fix: Wrapping variables in hsl() ) */
