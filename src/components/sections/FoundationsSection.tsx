@@ -313,7 +313,7 @@ function ColorSystem() {
           <div className="space-y-3">
             <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200">
               <span className="text-black font-medium">
-                Black text on White background
+                Black text on White
               </span>
               <span className="text-sm font-mono text-brand-purple">
                 21:1 ✓ AAA
@@ -329,10 +329,10 @@ function ColorSystem() {
             </div>
             <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200">
               <span className="text-[#414141] font-medium">
-                Dark Gray text on White background
+                Dark Gray text on White
               </span>
               <span className="text-sm font-mono text-brand-purple">
-                10.21:1 ✓ AA
+                10.21:1 ✓ AAA
               </span>
             </div>
             <div className="flex items-center justify-between p-4 bg-black rounded-lg">
@@ -348,7 +348,7 @@ function ColorSystem() {
                 Orange on White
               </span>
               <span className="text-sm font-mono text-brand-folly">
-                2.52:1 × AAA
+                2.52:1 × AA
               </span>
             </div>
             <div className="flex items-center justify-between p-4 bg-black rounded-lg border border-gray-200">
@@ -464,7 +464,7 @@ function Typography() {
       {/* Font Weights */}
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Font Weights</h2>
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-6">
           <div className="border border-border rounded-lg p-6 bg-card">
             <div
               className="text-5xl mb-3"
@@ -528,7 +528,7 @@ function Typography() {
         </div>
         <div className="border border-border rounded-lg divide-y divide-border bg-card">
           <div className="p-6 flex items-baseline gap-8">
-            <div className="w-24 text-sm text-foreground/75 shrink-0">H1</div>
+            <div className="w-6 sm:w-12 md:w-24 text-sm text-foreground/75 shrink-0">H1</div>
             <div className="flex-1">
               <h1 className="mb-2">Page Heading</h1>
               <div className="flex gap-6 text-sm text-foreground/75 flex-wrap">
@@ -539,7 +539,7 @@ function Typography() {
             </div>
           </div>
           <div className="p-6 flex items-baseline gap-8">
-            <div className="w-24 text-sm text-foreground/75 shrink-0">H2</div>
+            <div className="w-6 sm:w-12 md:w-24 text-sm text-foreground/75 shrink-0">H2</div>
             <div className="flex-1">
               <h2 className="mb-2">Section Heading</h2>
               <div className="flex gap-6 text-sm text-foreground/75 flex-wrap">
@@ -550,7 +550,7 @@ function Typography() {
             </div>
           </div>
           <div className="p-6 flex items-baseline gap-8">
-            <div className="w-24 text-sm text-foreground/75 shrink-0">H3</div>
+            <div className="w-6 sm:w-12 md:w-24 text-sm text-foreground/75 shrink-0">H3</div>
             <div className="flex-1">
               <h3 className="mb-2">Subsection Heading</h3>
               <div className="flex gap-6 text-sm text-foreground/75 flex-wrap">
@@ -561,7 +561,7 @@ function Typography() {
             </div>
           </div>
           <div className="p-6 flex items-baseline gap-8">
-            <div className="w-24 text-sm text-foreground/75 shrink-0">H4</div>
+            <div className="w-6 sm:w-12 md:w-24 text-sm text-foreground/75 shrink-0">H4</div>
             <div className="flex-1">
               <h4 className="mb-2">Card Heading</h4>
               <div className="flex gap-6 text-sm text-foreground/75 flex-wrap">
@@ -572,7 +572,7 @@ function Typography() {
             </div>
           </div>
           <div className="p-6 flex items-baseline gap-8">
-            <div className="w-24 text-sm text-foreground/75 shrink-0">Body</div>
+            <div className="w-6 sm:w-12 md:w-24 text-sm text-foreground/75 shrink-0">Body</div>
             <div className="flex-1">
               <p className="mb-2">
                 This is body text used for paragraphs and longer content. It
@@ -586,7 +586,7 @@ function Typography() {
             </div>
           </div>
           <div className="p-6 flex items-baseline gap-8">
-            <div className="w-24 text-sm text-foreground/75 shrink-0">
+            <div className="w-6 sm:w-12 md:w-24 text-sm text-foreground/75 shrink-0">
               Small
             </div>
             <div className="flex-1">

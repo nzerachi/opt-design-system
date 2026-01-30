@@ -148,39 +148,39 @@ function LayoutPatterns() {
           <div className="bg-muted-light p-8">
             <div className="grid grid-cols-4 gap-6 mb-8">
               <div>
-                <div className="h-4 bg-foreground/20 rounded w-20 mb-3" />
+                <div className="h-4 bg-foreground/20 rounded max-w-20 mb-3" />
                 <div className="space-y-2">
-                  <div className="h-3 bg-muted-light rounded w-24" />
-                  <div className="h-3 bg-muted-light rounded w-28" />
-                  <div className="h-3 bg-muted-light rounded w-20" />
+                  <div className="h-3 bg-muted-dark/25 rounded max-w-24" />
+                  <div className="h-3 bg-muted-dark/25 rounded max-w-28" />
+                  <div className="h-3 bg-muted-dark/25 rounded max-w-20" />
                 </div>
               </div>
               <div>
-                <div className="h-4 bg-foreground/20 rounded w-24 mb-3" />
+                <div className="h-4 bg-foreground/20 rounded max-w-24 mb-3" />
                 <div className="space-y-2">
-                  <div className="h-3 bg-muted-light rounded w-20" />
-                  <div className="h-3 bg-muted-light rounded w-24" />
-                  <div className="h-3 bg-muted-light rounded w-28" />
+                  <div className="h-3 bg-muted-dark/25 rounded max-w-20" />
+                  <div className="h-3 bg-muted-dark/25 rounded max-w-24" />
+                  <div className="h-3 bg-muted-dark/25 rounded max-w-28" />
                 </div>
               </div>
               <div>
-                <div className="h-4 bg-foreground/20 rounded w-20 mb-3" />
+                <div className="h-4 bg-foreground/20 rounded max-w-20 mb-3" />
                 <div className="space-y-2">
-                  <div className="h-3 bg-muted-light rounded w-16" />
-                  <div className="h-3 bg-muted-light rounded w-20" />
-                  <div className="h-3 bg-muted-light rounded w-24" />
+                  <div className="h-3 bg-muted-dark/25 rounded max-w-16" />
+                  <div className="h-3 bg-muted-dark/25 rounded max-w-20" />
+                  <div className="h-3 bg-muted-dark/25 rounded max-w-24" />
                 </div>
               </div>
               <div>
-                <div className="h-4 bg-foreground/20 rounded w-28 mb-3" />
+                <div className="h-4 bg-foreground/20 rounded max-w-28 mb-3" />
                 <div className="flex gap-2">
-                  <div className="h-8 bg-muted-light rounded flex-1" />
-                  <div className="h-8 bg-foreground/20 rounded w-20" />
+                  <div className="h-8 bg-muted-dark/25 rounded flex-1" />
+                  <div className="h-8 bg-foreground/20 rounded max-w-20" />
                 </div>
               </div>
             </div>
             <div className="border-t border-border pt-6">
-              <div className="h-3 bg-muted-light rounded w-64" />
+              <div className="h-3 bg-muted-dark/25 rounded max-w-64" />
             </div>
           </div>
         </div>

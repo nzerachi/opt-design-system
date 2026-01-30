@@ -2417,33 +2417,32 @@ function DashboardSection() {
         <h2 className="text-2xl font-bold">Search & Filters</h2>
         <div className="border border-border rounded-lg p-6 space-y-4">
           <div className="flex gap-4">
-            <div className="flex-1">
+            <div className="flex-1 relative">
               <input
                 type="search"
                 placeholder="Search patients, appointments, or records..."
-                className="w-full px-4 py-3 pl-10 bg-input-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-foreground/20 focus:border-foreground transition-all"
+                className="w-full px-4 pr-8 py-3 bg-input-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-foreground/20 focus:border-foreground transition-all"
               />
-            </div>
-            <button className="px-4 py-3 border border-border rounded-lg hover:bg-muted-light transition-colors flex items-center gap-2">
+            <button className="absolute top-2 right-2 px-2 py-2 border border-border rounded-lg hover:bg-muted-light transition-colors flex items-center">
               <Filter className="w-4 h-4" />
-              <span>Filters</span>
             </button>
+            </div>
           </div>
           <div className="flex items-center gap-3 flex-wrap">
             <span className="text-sm text-foreground/75">Quick Filters:</span>
-            <button className="px-3 py-1.5 border border-border rounded-lg text-sm hover:bg-muted-light transition-colors">
+            <button className="px-3 py-1.5 border border-border rounded-lg text-sm hover:bg-muted-light focus:bg-foreground focus:text-background transition-colors">
               Today
             </button>
-            <button className="px-3 py-1.5 border border-border rounded-lg text-sm hover:bg-muted-light transition-colors">
+            <button className="px-3 py-1.5 border border-border rounded-lg text-sm hover:bg-muted-light focus:bg-foreground focus:text-background transition-colors">
               This Week
             </button>
-            <button className="px-3 py-1.5 bg-foreground text-background rounded-lg text-sm font-medium">
+            <button className="px-3 py-1.5 border border-border rounded-lg text-sm hover:bg-muted-light focus:bg-foreground focus:text-background transition-colors">
               This Month
             </button>
-            <button className="px-3 py-1.5 border border-border rounded-lg text-sm hover:bg-muted-light transition-colors">
+            <button className="px-3 py-1.5 border border-border rounded-lg text-sm hover:bg-muted-light focus:bg-foreground focus:text-background transition-colors">
               Completed
             </button>
-            <button className="px-3 py-1.5 border border-border rounded-lg text-sm hover:bg-muted-light transition-colors">
+            <button className="px-3 py-1.5 border border-border rounded-lg text-sm hover:bg-muted-light focus:bg-foreground focus:text-background transition-colors">
               Pending
             </button>
           </div>

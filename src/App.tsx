@@ -194,8 +194,8 @@ export default function App() {
         <aside
           className={`
             /* Base Styles (Both) */
-            fixed md2:sticky top-15 bottom-0 left-0 z-40 
-            flex flex-col border-r border-border bg-linear-to-br from-background via-background to-muted-light 
+            fixed md2:sticky top-14 md2:top-15 bottom-0 left-0 z-40 
+            flex flex-col border-r border-border bg-linear-to-br from-background/50 via-background/50 to-muted-light/50 backdrop-blur-md
             transition-transform duration-300 ease-in-out
             overflow-y-auto pt-[1rem] pr-4 pb-10
             
@@ -207,7 +207,7 @@ export default function App() {
             md2:translate-x-0 md2:w-[calc(340px+4vw)] md2:top-[3.5rem] md2:h-[calc(100vh-3.5rem)] md2:z-0
           `}
         >
-          <nav className="p-4 space-y-1">
+          <nav className="p-4 space-y-2">
             {sections.map((section) => (
               <div key={section.id}>
                 <button
@@ -221,7 +221,7 @@ export default function App() {
                   className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left transition-all text-sm ${
                     activeSection === section.id
                       ? "bg-foreground text-background font-medium"
-                      : "text-foreground hover:bg-muted-light hover:text-foreground"
+                      : "text-foreground hover:bg-foreground/15 hover:text-foreground"
                   }`}
                 >
                   <section.icon className="w-4 h-4 shrink-0" />
@@ -230,7 +230,7 @@ export default function App() {
                 {activeSection === section.id &&
                   section.subSections &&
                   section.subSections.length > 0 && (
-                    <div className="ml-7 mt-1 space-y-1">
+                    <div className="ml-7 mt-1 space-y-2">
                       {section.subSections.map((sub) => (
                         <button
                           key={sub.id}
@@ -240,7 +240,7 @@ export default function App() {
                           }}
                           className={`w-full text-left px-3 py-1.5 rounded text-xs transition-all ${
                             activeSubSection === sub.id
-                              ? "bg-muted-light font-medium text-foreground"
+                              ? "bg-foreground/15 font-medium text-foreground"
                               : "hover:outline outline-muted-light hover:text-foreground/75"
                           }`}
                         >
