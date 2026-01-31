@@ -48,6 +48,11 @@ import {
 } from "lucide-react";
 import Symbol from "../../assets/symbol";
 
+import Mmesoo from "/Mmesoo.png";
+import LightFlow from "/LightFlow.png";
+import EyeGraphics from "/EyeGraphics.png";
+import Eye_illustration from "/Eye_illustration.svg";
+
 interface FoundationsSectionProps {
   activeSubSection: string;
 }
@@ -1025,7 +1030,7 @@ function Imagery() {
           <div className="flex flex-col justify-end border border-border rounded-lg overflow-hidden">
             <div className="flex items-center justify-center px-6">
               <img
-                src="/LightFlow.png"
+                src={LightFlow}
                 alt="Light Flow Effect"
                 className="w-full h-full object-contain"
               />
@@ -1040,7 +1045,7 @@ function Imagery() {
           <div className="flex flex-col justify-end border border-border rounded-lg overflow-hidden">
             <div className="flex items-center justify-center px-6">
               <img
-                src="/EyeGraphics.png"
+                src={EyeGraphics}
                 alt="Eye Graphics"
                 className="w-full h-full object-contain"
               />
@@ -1055,7 +1060,7 @@ function Imagery() {
           <div className="flex flex-col justify-end border border-border rounded-lg overflow-hidden">
             <div className="flex items-center justify-center px-6">
               <img
-                src="/Mmesoo.png"
+                src={Mmesoo}
                 alt="Macro Eye"
                 className="w-full h-full object-contain"
               />
@@ -1212,7 +1217,7 @@ function Imagery() {
           <div className="border border-border w-full rounded-lg overflow-hidden">
             <div className="bg-muted-light w-full flex items-center justify-center p-6">
               <img
-                src="/Eye_illustration.svg"
+                src={Eye_illustration}
                 alt="Eye Detail"
                 className="w-full h-full object-cover"
               />

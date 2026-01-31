@@ -50,6 +50,7 @@ import {
 } from "lucide-react";
 import Wordmark from "../../assets/wordmark";
 import Symbol from "../../assets/symbol";
+import wordmarkLoading from "/wordmark_loading.svg";
 
 interface ComponentsSectionProps {
   activeSubSection: string;
@@ -1835,7 +1836,7 @@ function FeedbackSection() {
           <img
             alt="wordmark loading"
             className="w-full h-auto"
-            src="/wordmark_loading.svg"
+            src={wordmarkLoading}
           />
         </div>
       </section>
