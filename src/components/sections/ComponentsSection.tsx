@@ -256,10 +256,10 @@ function ButtonsSection() {
           </p>
         </div>
         <div className="border border-border rounded-lg overflow-x-auto">
-          <div className="min-w-100 p-6 space-y-6">
+          <div className="min-w-110 p-6 space-y-6">
           <div className="grid grid-cols-[0.5fr_2fr_2fr] items-center gap-3">
             <div className="w-10 text-sm text-foreground/75">Normal</div>
-            <button className="justify-self-center py-3 px-2 bg-transparent border-2 border-foreground text-foreground rounded-lg font-medium">
+            <button className="justify-self-center py-3 px-6 bg-transparent min-w-42 border-2 border-foreground text-foreground rounded-lg font-medium hover:bg-foreground hover:text-background transition-colors">
               Browse Frames
             </button>
             <code className="text-xs bg-muted-light px-2 py-1 rounded">
@@ -268,7 +268,7 @@ function ButtonsSection() {
           </div>
           <div className="grid grid-cols-[0.5fr_2fr_2fr] items-center gap-3">
             <div className="w-10 text-sm text-foreground/75">Hover</div>
-            <button className="justify-self-center py-3 px-2 bg-foreground text-background border-2 border-foreground rounded-lg font-medium">
+            <button className="justify-self-center py-3 px-6 bg-foreground text-background min-w-42 border-2 border-foreground rounded-lg font-medium">
               Browse Frames
             </button>
             <code className="text-xs bg-muted-light px-2 py-1 rounded">
