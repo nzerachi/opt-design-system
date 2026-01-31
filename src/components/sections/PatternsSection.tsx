@@ -367,8 +367,8 @@ function FunctionalPatterns() {
             Navigate through multiple pages of content
           </p>
         </div>
-        <div className="border border-border rounded-lg p-6">
-          <div className="flex items-center justify-center gap-2">
+        <div className="border border-border rounded-lg p-6 overflow-x-auto">
+          <div className="flex min-w-92 items-center sm:justify-center gap-2">
             <button
               className="px-3 py-2 border border-border rounded hover:bg-muted"
               disabled

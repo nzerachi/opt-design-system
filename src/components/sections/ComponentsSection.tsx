@@ -99,8 +99,8 @@ function ButtonsSection() {
       {/* Anatomy */}
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Button Anatomy</h2>
-        <div className="border border-border rounded-lg p-16 bg-card flex justify-center">
-          <div className="w-80">
+        <div className="border border-border rounded-lg p-16 overflow-x-auto flex justify-center">
+          <div className="">
             <div className="relative inline-flex group">
               {/* --- THE BUTTON --- */}
               {/* z-10 ensures text sits above the padding highlights */}
@@ -197,7 +197,8 @@ function ButtonsSection() {
             High-emphasis actions, limited to 1-2 per screen
           </p>
         </div>
-        <div className="border border-border rounded-lg overflow-hidden">
+        <div className="border border-border rounded-lg overflow-x-auto">
+          <div className="min-w-100">
           <div className="bg-muted-light px-6 py-3 border-b border-border">
             <h3 className="font-bold">States</h3>
           </div>
@@ -241,6 +242,7 @@ function ButtonsSection() {
                 opacity: 0.5, cursor: not-allowed
               </code>
             </div>
+            </div>
           </div>
         </div>
       </section>
@@ -253,24 +255,26 @@ function ButtonsSection() {
             Medium-emphasis actions, supporting primary CTAs
           </p>
         </div>
-        <div className="border border-border rounded-lg p-6 space-y-6">
-          <div className="grid grid-cols-[0.5fr_2fr_2fr] items-center gap-6">
+        <div className="border border-border rounded-lg overflow-x-auto">
+          <div className="min-w-100 p-6 space-y-6">
+          <div className="grid grid-cols-[0.5fr_2fr_2fr] items-center gap-3">
             <div className="w-10 text-sm text-foreground/75">Normal</div>
-            <button className="px-6 justify-self-center py-3 bg-transparent border-2 border-foreground text-foreground rounded-lg font-medium">
+            <button className="justify-self-center py-3 px-2 bg-transparent border-2 border-foreground text-foreground rounded-lg font-medium">
               Browse Frames
             </button>
             <code className="text-xs bg-muted-light px-2 py-1 rounded">
               border-2 border-foreground
             </code>
           </div>
-          <div className="grid grid-cols-[0.5fr_2fr_2fr] items-center gap-6">
+          <div className="grid grid-cols-[0.5fr_2fr_2fr] items-center gap-3">
             <div className="w-10 text-sm text-foreground/75">Hover</div>
-            <button className="px-6 justify-self-center py-3 bg-foreground text-background border-2 border-foreground rounded-lg font-medium">
+            <button className="justify-self-center py-3 px-2 bg-foreground text-background border-2 border-foreground rounded-lg font-medium">
               Browse Frames
             </button>
             <code className="text-xs bg-muted-light px-2 py-1 rounded">
               bg-foreground on hover
             </code>
+          </div>
           </div>
         </div>
       </section>
@@ -296,8 +300,8 @@ function ButtonsSection() {
       {/* Button Sizes */}
       <section className="space-y-6">
         <h2 className="text-2xl font-bold">Sizes</h2>
-        <div className="border border-border rounded-lg p-6 space-y-6">
-          <div className="flex items-end gap-4">
+        <div className="border border-border rounded-lg p-6 space-y-6 overflow-x-auto">
+          <div className="flex min-w-100 items-end gap-4">
             <div className="space-y-2">
               <button className="px-4 py-2 text-sm bg-foreground text-background rounded-lg font-medium">
                 Small
@@ -309,7 +313,7 @@ function ButtonsSection() {
                 Medium
               </button>
               <p className="text-xs text-foreground/75">
-                px-6 py-3 text-base (Default)
+                px-6 py-3 text-base 
               </p>
             </div>
             <div className="space-y-2">
@@ -634,7 +638,7 @@ function ButtonsSection() {
           <h3 className="font-bold text-sm text-foreground/75">
             Size Variations
           </h3>
-          <div className="flex items-end gap-4">
+          <div className="flex flex-wrap items-end gap-4">
             <button
               className="w-8 h-8 flex items-center justify-center bg-foreground text-background hover:opacity-90 rounded-lg transition-opacity"
               title="Small"

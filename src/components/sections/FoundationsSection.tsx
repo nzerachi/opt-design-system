@@ -314,8 +314,8 @@ function ColorSystem() {
             All color combinations meet WCAG 2.2 Level AA standards
           </p>
         </div>
-        <div className="border border-border rounded-lg p-6">
-          <div className="space-y-3">
+        <div className="border border-border rounded-lg p-6 overflow-x-auto">
+          <div className="min-w-80 space-y-3">
             <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200">
               <span className="text-black font-medium">
                 Black on White
@@ -810,8 +810,8 @@ function Iconography() {
             Standard sizes for consistent scaling
           </p>
         </div>
-        <div className="border border-border rounded-lg p-8">
-          <div className="flex items-end gap-8">
+        <div className="border border-border rounded-lg p-8 overflow-x-auto">
+          <div className="flex min-w-80 items-end gap-8">
             <div className="text-center">
               <Eye className="w-4 h-4 mx-auto mb-2" />
               <p className="text-xs font-mono">16px</p>
@@ -876,7 +876,7 @@ function Iconography() {
             configurations
           </p>
         </div>
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 xs:grid-cols-4 gap-6">
           <div className="border border-border rounded-lg p-6 text-center bg-card">
             <div className="mx-auto mb-3 flex justify-center">
               <Symbol className="fill-[#808080] stroke-none w-15" />
@@ -906,7 +906,7 @@ function Iconography() {
             <p className="text-xs text-foreground/75">Watermark</p>
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 xs:grid-cols-4 gap-6">
           <div className="border border-border rounded-lg p-6 text-center bg-card">
             <div className="mx-auto mb-3 flex justify-center">
               <Symbol className="fill-none stroke-[#808080] stroke-2 w-15" />
@@ -1443,12 +1443,12 @@ function SpacingGrid() {
           <h2 className="text-2xl font-bold mb-2">Layout Grid</h2>
           <p className="text-foreground/75">12-column responsive grid system</p>
         </div>
-        <div className="border border-border rounded-lg p-8 bg-card">
-          <div className="grid grid-cols-12 gap-4">
+        <div className="border border-border rounded-lg p-8 bg-card overflow-x-auto">
+          <div className="grid grid-cols-12 gap-1 min-w-80">
             {Array.from({ length: 12 }).map((_, i) => (
               <div
                 key={i}
-                className="bg-brand-purple/20 h-12 flex items-center justify-center text-xs font-mono"
+                className="bg-brand-purple/20 h-36 flex items-center justify-center text-xs font-mono"
               >
                 {i + 1}
               </div>

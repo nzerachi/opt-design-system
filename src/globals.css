@@ -117,6 +117,7 @@
 
   /* Screen Breakpoints */
   --breakpoint-md2: 900px;
+  --breakpoint-xs: 520px;
 
   /* Custom Brand Colors (Hex codes are safe) */
   --color-brand-purple: #cc33ff;
