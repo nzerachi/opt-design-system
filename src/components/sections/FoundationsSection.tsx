@@ -313,7 +313,7 @@ function ColorSystem() {
           <div className="space-y-3">
             <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200">
               <span className="text-black font-medium">
-                Black text on White
+                Black on White
               </span>
               <span className="text-sm font-mono text-brand-purple">
                 21:1 ✓ AAA
@@ -321,18 +321,18 @@ function ColorSystem() {
             </div>
             <div className="flex items-center justify-between p-4 bg-[#414141] rounded-lg">
               <span className="text-[#e6e6e6] font-medium">
-                Light Gray text on Dark Gray
+                Light Gray on Dark Gray
               </span>
               <span className="text-sm font-mono text-brand-purple">
-                8.18:1 ✓ AAA
+                8.2:1 ✓ AAA
               </span>
             </div>
             <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200">
               <span className="text-[#414141] font-medium">
-                Dark Gray text on White
+                Dark Gray on White
               </span>
               <span className="text-sm font-mono text-brand-purple">
-                10.21:1 ✓ AAA
+                10.2:1 ✓ AAA
               </span>
             </div>
             <div className="flex items-center justify-between p-4 bg-black rounded-lg">
@@ -356,7 +356,7 @@ function ColorSystem() {
                 Neon Purple on Black
               </span>
               <span className="text-sm font-mono text-brand-purple">
-                5.49:1 ✓ AA
+                5.5:1 ✓ AA
               </span>
             </div>
             <div className="flex items-center justify-between p-4 bg-white rounded-lg border border-gray-200">
@@ -364,7 +364,7 @@ function ColorSystem() {
                 Neon Purple on White
               </span>
               <span className="text-sm font-mono text-brand-folly">
-                3.83:1 × AA
+                3.8:1 × AA
               </span>
             </div>
             <div className="flex items-center justify-between p-4 bg-black rounded-lg border border-gray-200">
@@ -1022,48 +1022,48 @@ function Imagery() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="border border-border rounded-lg overflow-hidden">
-            <div className="aspect-square bg-muted-light flex items-center justify-center p-6">
+          <div className="flex flex-col justify-end border border-border rounded-lg overflow-hidden">
+            <div className="flex items-center justify-center px-6">
               <img
-                src="src/assets/LightFlow.png"
+                src="/LightFlow.png"
                 alt="Light Flow Effect"
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="p-4">
+            <div className="p-4 bg-background border-t">
               <h3 className="font-bold mb-1">Light Flow</h3>
               <p className="text-sm text-foreground/75">
-                Abstract light rays, ideal for hero backgrounds
+                Abstract light rays.
               </p>
             </div>
           </div>
-          <div className="border border-border rounded-lg overflow-hidden">
-            <div className="aspect-square bg-muted-light flex items-center justify-center p-6">
+          <div className="flex flex-col justify-end border border-border rounded-lg overflow-hidden">
+            <div className="flex items-center justify-center px-6">
               <img
-                src="src/assets/EyeGraphics.png"
+                src="/EyeGraphics.png"
                 alt="Eye Graphics"
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="p-4">
+            <div className="p-4 bg-background border-t">
               <h3 className="font-bold mb-1">Eye Graphics</h3>
               <p className="text-sm text-foreground/75">
-                Technical eye diagram for educational content
+                Technical eye diagram.
               </p>
             </div>
           </div>
-          <div className="border border-border rounded-lg overflow-hidden">
-            <div className="aspect-square bg-muted-light flex items-center justify-center p-6">
+          <div className="flex flex-col justify-end border border-border rounded-lg overflow-hidden">
+            <div className="flex items-center justify-center px-6">
               <img
-                src="src/assets/Mmeso.png"
+                src="/Mmesoo.png"
                 alt="Macro Eye"
                 className="w-full h-full object-contain"
               />
             </div>
-            <div className="p-4">
-              <h3 className="font-bold mb-1">Macro Photography</h3>
+            <div className="p-4 bg-background border-t">
+              <h3 className="font-bold mb-1">Model shot</h3>
               <p className="text-sm text-foreground/75">
-                Close-up eye detail for impact
+                Our model on glasses.
               </p>
             </div>
           </div>
@@ -1212,7 +1212,7 @@ function Imagery() {
           <div className="border border-border w-full rounded-lg overflow-hidden">
             <div className="bg-muted-light w-full flex items-center justify-center p-6">
               <img
-                src="src/assets/Eye_illustration.svg"
+                src="/Eye_illustration.svg"
                 alt="Eye Detail"
                 className="w-full h-full object-cover"
               />

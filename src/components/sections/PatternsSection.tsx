@@ -37,7 +37,9 @@ function LayoutPatterns() {
         </div>
         <div className="border border-border rounded-lg overflow-hidden">
           <div className="bg-linear-to-br from-muted/50 to-muted/20 p-16 text-center">
-            <h1 className="md:text-5xl text-[44px] leading-12 font-bold mb-4">See the World <br className="block md:hidden"/> Clearly</h1>
+            <h1 className="md:text-5xl text-[44px] leading-12 font-bold mb-4">
+              See the World <br className="block md:hidden" /> Clearly
+            </h1>
             <p className="text-sm text-foreground/75 max-w-2xl mx-auto mb-8">
               Browse our curated and certified exclusive frames
             </p>

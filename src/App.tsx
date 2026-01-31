@@ -21,8 +21,47 @@ import { GovernanceSection } from "./components/sections/GovernanceSection";
 import Wordmark from "./assets/wordmark";
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState("principles");
-  const [activeSubSection, setActiveSubSection] = useState<string>("logos");
+const getHashParams = () => {
+  const hash = window.location.hash.replace('#', '');
+  const [section, subSection] = hash.split('/'); // Split by slash
+  return { section, subSection };
+};
+
+// 1. Initialize Active Section
+const [activeSection, setActiveSection] = useState(() => {
+  const { section } = getHashParams();
+  return section || "principles";
+});
+
+// 2. Initialize Active Sub-Section (with smart defaults)
+const [activeSubSection, setActiveSubSection] = useState<string>(() => {
+  const { section, subSection } = getHashParams();
+  
+  // If the URL has a sub-section (e.g., /symbol), use it
+  if (subSection) return subSection;
+
+  // Otherwise, return the correct default sub-section for the current section
+  // (This prevents "Logos" from showing up inside "Components")
+  switch (section) {
+    case "brand-identity": return "logos";
+    case "components": return "buttons";
+    case "foundations": return "colors";
+    case "governance": return "code-implementation";
+    case "patterns": return "layout-patterns";
+    default: return "logos"; 
+  }
+});
+
+// 3. Sync State to URL Hash
+// Whenever section or subSection changes, update the URL
+useEffect(() => {
+  if (activeSubSection) {
+    window.location.hash = `${activeSection}/${activeSubSection}`;
+  } else {
+    window.location.hash = activeSection;
+  }
+}, [activeSection, activeSubSection]);
+
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const mainContentRef = useRef<HTMLDivElement>(null);

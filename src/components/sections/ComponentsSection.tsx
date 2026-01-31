@@ -1835,7 +1835,7 @@ function FeedbackSection() {
           <img
             alt="wordmark loading"
             className="w-full h-auto"
-            src="src/assets/wordmark_loading.svg"
+            src="/wordmark_loading.svg"
           />
         </div>
       </section>
