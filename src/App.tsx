@@ -190,11 +190,10 @@ useEffect(() => {
   // 3. Helper to handle navigation
   const handleNavigate = (route: any) => {
     setActiveSection(route.sectionId);
-    if (route.subId) {
-      setActiveSubSection(route.subId);
-    }
+    setActiveSubSection(route.subId || "");
     // The useEffect will handle scrolling automatically
   };
+
 
   return (
     <div className="h-screen bg-background relative">
@@ -252,17 +251,23 @@ useEffect(() => {
           `}
         >
           <nav className="p-4 space-y-2">
-            {sections.map((section) => (
-              <div key={section.id} className="mb-2">
-                <button
-                  onClick={() => {
-                    setExpandedSection(expandedSection === section.id ? null : section.id);
-                  }}
-                  className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left transition-all text-sm ${
-                    activeSection === section.id
-                      ? "bg-foreground text-background font-medium"
-                      : "text-foreground hover:bg-foreground/15 hover:text-foreground"
-                  }`}
+            {sections.map((section) => {
+              const hasSubMenus = section.subSections && section.subSections.length > 0;
+              return (
+                <div key={section.id} className="mb-2">
+                  <button
+                    onClick={() => {
+                      if (hasSubMenus) {
+                        setExpandedSection(
+                          expandedSection === section.id ? null : section.id
+                        );
+                      } else {
+                        setActiveSection(section.id);
+                        setActiveSubSection("");
+                        setIsMobileMenuOpen(false);
+                      }
+                    }}
+                  className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left transition-all text-sm font-medium focus:bg-foreground focus:text-background text-foreground hover:bg-foreground/15 hover:text-foreground"
                 >
                   <section.icon className="w-4 h-4 shrink-0" />
                   <span>{section.label}</span>
@@ -275,11 +280,12 @@ useEffect(() => {
                         <button
                           key={sub.id}
                           onClick={() => {
+                            setActiveSection(section.id);
                             setActiveSubSection(sub.id);
                             setIsMobileMenuOpen(false); // Close menu on sublink click
                           }}
                           className={`w-full text-left px-3 py-1.5 rounded text-xs transition-all ${
-                            activeSubSection === sub.id
+                            activeSubSection === sub.id && activeSection === section.id
                               ? "bg-foreground/15 font-medium text-foreground"
                               : "hover:outline outline-muted-light hover:text-foreground/75"
                           }`}
@@ -290,7 +296,7 @@ useEffect(() => {
                     </div>
                   )}
               </div>
-            ))}
+            )})}
           </nav>
         </aside>
 
