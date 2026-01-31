@@ -81,6 +81,11 @@ useEffect(() => {
     setIsMobileMenuOpen(false);
   }, [activeSection, activeSubSection]);
 
+  const [expandedSection, setExpandedSection] = useState<string | null>(() => {
+    const { section } = getHashParams();
+    return section || "principles";
+  });
+
   const sections = [
     {
       id: "principles",
@@ -248,14 +253,10 @@ useEffect(() => {
         >
           <nav className="p-4 space-y-2">
             {sections.map((section) => (
-              <div key={section.id}>
+              <div key={section.id} className="mb-2">
                 <button
                   onClick={() => {
-                    setActiveSection(section.id);
-                    if (section.subSections && section.subSections.length > 0) {
-                      setActiveSubSection(section.subSections[0].id);
-                    }
-                    // Note: We close the mobile menu via the useEffect on activeSection change
+                    setExpandedSection(expandedSection === section.id ? null : section.id);
                   }}
                   className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-left transition-all text-sm ${
                     activeSection === section.id
@@ -266,7 +267,7 @@ useEffect(() => {
                   <section.icon className="w-4 h-4 shrink-0" />
                   <span>{section.label}</span>
                 </button>
-                {activeSection === section.id &&
+                {expandedSection === section.id &&
                   section.subSections &&
                   section.subSections.length > 0 && (
                     <div className="ml-7 mt-1 space-y-2">
