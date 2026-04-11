@@ -11,6 +11,7 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
+  ShieldCheck,
 } from "lucide-react";
 import { PrinciplesSection } from "./components/sections/PrinciplesSection";
 import { BrandIdentitySection } from "./components/sections/BrandIdentitySection";
@@ -18,6 +19,7 @@ import { FoundationsSection } from "./components/sections/FoundationsSection";
 import { ComponentsSection } from "./components/sections/ComponentsSection";
 import { PatternsSection } from "./components/sections/PatternsSection";
 import { GovernanceSection } from "./components/sections/GovernanceSection";
+import { GuidelinesSection } from "./components/sections/GuidelinesSection";
 import Wordmark from "./assets/wordmark";
 
 export default function App() {
@@ -46,9 +48,10 @@ const [activeSubSection, setActiveSubSection] = useState<string>(() => {
     case "brand-identity": return "logos";
     case "components": return "buttons";
     case "foundations": return "colors";
-    case "governance": return "code-implementation";
+    case "governance": return "getting-started";
     case "patterns": return "layout-patterns";
-    default: return "logos"; 
+    case "guidelines": return "accessibility";
+    default: return "logos";
   }
 });
 
@@ -65,13 +68,6 @@ useEffect(() => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const mainContentRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      document.documentElement.classList.add("dark");
-    }
-  }, []);
 
   // Scroll to top when section changes
   useEffect(() => {
@@ -111,10 +107,12 @@ useEffect(() => {
       icon: Palette,
       subSections: [
         { id: "colors", label: "Color System" },
-        { id: "typography", label: "Typography" },
+        { id: "typography", label: "Typography Scale" },
+        { id: "spacing", label: "Spacing & Grid" },
+        { id: "shadows", label: "Shadows & Elevation" },
+        { id: "motion", label: "Motion & Animation" },
         { id: "iconography", label: "Iconography" },
         { id: "imagery", label: "Imagery" },
-        { id: "spacing", label: "Spacing & Grid" },
       ],
     },
     {
@@ -122,12 +120,22 @@ useEffect(() => {
       label: "Component Library",
       icon: Layout,
       subSections: [
-        { id: "buttons", label: "Buttons & CTAs" },
-        { id: "inputs", label: "Forms & Inputs" },
-        { id: "navigation", label: "Navigation" },
-        { id: "cards", label: "Cards" },
-        { id: "feedback", label: "Feedback Elements" },
-        { id: "dashboard", label: "Dashboard Components" },
+        { id: "buttons", label: "Buttons & Actions" },
+        { id: "inputs", label: "Text Inputs" },
+        { id: "selection", label: "Selection Controls" },
+        { id: "data-display", label: "Data Display" },
+        { id: "feedback", label: "Feedback" },
+        { id: "overlay", label: "Overlay" },
+        { id: "navigation-comps", label: "Navigation" },
+        { id: "layout-comps", label: "Layout" },
+        { id: "typography-comps", label: "Typography" },
+        { id: "file-upload", label: "File Upload" },
+        { id: "toast", label: "Toast & Notifications" },
+        { id: "link", label: "Link" },
+        { id: "form", label: "Form" },
+        { id: "media", label: "Media & Image" },
+        { id: "utilities", label: "Utilities" },
+        { id: "primitives", label: "Primitives" },
       ],
     },
     {
@@ -137,6 +145,24 @@ useEffect(() => {
       subSections: [
         { id: "layout-patterns", label: "Layout Patterns" },
         { id: "functional-patterns", label: "Functional Patterns" },
+        { id: "dialogs", label: "Dialogs" },
+        { id: "empty-states", label: "Empty States" },
+        { id: "filtering", label: "Filtering" },
+        { id: "forms-pattern", label: "Forms" },
+        { id: "loading-pattern", label: "Loading" },
+        { id: "notifications-pattern", label: "Notifications" },
+        { id: "status-indicators", label: "Status Indicators" },
+      ],
+    },
+    {
+      id: "guidelines",
+      label: "Guidelines",
+      icon: ShieldCheck,
+      subSections: [
+        { id: "accessibility", label: "Accessibility" },
+        { id: "content", label: "Content" },
+        { id: "themes", label: "Themes" },
+        { id: "data-visualization", label: "Data Visualization" },
       ],
     },
     {
@@ -144,9 +170,11 @@ useEffect(() => {
       label: "Documentation",
       icon: GitBranch,
       subSections: [
+        { id: "getting-started", label: "Getting Started" },
         { id: "code-implementation", label: "Code Implementation" },
         { id: "usage-guidelines", label: "Usage Guidelines" },
         { id: "contribution", label: "Contribution Model" },
+        { id: "whats-new", label: "What's New" },
       ],
     },
   ];
@@ -318,6 +346,9 @@ useEffect(() => {
             )}
             {activeSection === "patterns" && (
               <PatternsSection activeSubSection={activeSubSection} />
+            )}
+            {activeSection === "guidelines" && (
+              <GuidelinesSection activeSubSection={activeSubSection} />
             )}
             {activeSection === "governance" && (
               <GovernanceSection activeSubSection={activeSubSection} />

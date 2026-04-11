@@ -1,4 +1,4 @@
-import { Code, FileText, GitBranch, CheckCircle } from "lucide-react";
+import { Code, FileText, GitBranch, CheckCircle, Paintbrush, Terminal, Package, Sparkles } from "lucide-react";
 
 interface GovernanceSectionProps {
   activeSubSection: string;
@@ -7,6 +7,10 @@ interface GovernanceSectionProps {
 export function GovernanceSection({
   activeSubSection,
 }: GovernanceSectionProps) {
+  if (activeSubSection === "getting-started") {
+    return <GettingStarted />;
+  }
+
   if (activeSubSection === "code-implementation") {
     return <CodeImplementation />;
   }
@@ -19,7 +23,309 @@ export function GovernanceSection({
     return <ContributionModel />;
   }
 
-  return null;
+  if (activeSubSection === "whats-new") {
+    return <WhatsNew />;
+  }
+
+  return <GettingStarted />;
+}
+
+// ─── Getting Started ──────────────────────────────────────────────────────────
+
+function GettingStarted() {
+  return (
+    <div className="space-y-12">
+      <div className="space-y-4 mb-12 pb-8 border-b border-border">
+        <h1 className="text-4xl font-bold">Getting Started</h1>
+        <p className="text-lg text-foreground/60 max-w-3xl leading-relaxed">
+          Everything you need to start using Opticule DS — whether you're a designer configuring Figma libraries or an engineer installing the npm package.
+        </p>
+      </div>
+
+      {/* Audience cards */}
+      <section className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="border border-border rounded-xl p-6 space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="size-10 rounded-xl bg-brand-purple/10 flex items-center justify-center">
+                <Paintbrush className="size-5 text-brand-purple" />
+              </div>
+              <h2 className="text-xl font-bold">For Designers</h2>
+            </div>
+            <p className="text-sm text-foreground/60">Access the Figma library, design tokens, and component specs.</p>
+            <ol className="space-y-3 text-sm">
+              {[
+                "Open Figma and go to Assets → Teams → Opticule DS",
+                "Enable the Opticule DS library in your file",
+                "Apply the Light or Dark theme from the design token variables",
+                "Drag components from the Components panel",
+                "Read the Usage Guidelines for do/don't patterns per component",
+              ].map((step, i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="size-5 rounded-full bg-brand-purple/15 text-brand-purple text-xs font-bold flex items-center justify-center shrink-0">{i + 1}</span>
+                  <span className="text-foreground/70">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className="border border-border rounded-xl p-6 space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="size-10 rounded-xl bg-brand-orange/10 flex items-center justify-center">
+                <Terminal className="size-5 text-brand-orange" />
+              </div>
+              <h2 className="text-xl font-bold">For Engineers</h2>
+            </div>
+            <p className="text-sm text-foreground/60">Install the package, wrap your app, and start building.</p>
+            <ol className="space-y-3 text-sm">
+              {[
+                "npm install @opticule/ds",
+                "Import globals.css at your app entry point",
+                "Wrap your app in <ThemeProvider>",
+                "Add <Toaster /> for toast notifications",
+                "Import and use components anywhere in your tree",
+              ].map((step, i) => (
+                <li key={i} className="flex gap-3">
+                  <span className="size-5 rounded-full bg-brand-orange/15 text-brand-orange text-xs font-bold flex items-center justify-center shrink-0">{i + 1}</span>
+                  <span className="text-foreground/70">{step}</span>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* Install */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold">Installation</h2>
+        <div className="border border-border rounded-xl overflow-hidden">
+          <div className="bg-foreground/5 border-b border-border px-4 py-2.5 flex items-center gap-2">
+            <Package className="size-4 text-foreground/40" />
+            <span className="text-xs font-mono text-foreground/50">Terminal</span>
+          </div>
+          <div className="p-5 space-y-3 font-mono text-sm">
+            <div className="text-foreground/40 text-xs">Step 1 — install</div>
+            <pre className="text-brand-orange">npm install @opticule/ds</pre>
+            <div className="text-foreground/40 text-xs">Step 2 — import styles (once, at app root)</div>
+            <pre><span className="text-blue-400">import</span> <span className="text-yellow-400">'@opticule/ds/styles'</span>;</pre>
+            <div className="text-foreground/40 text-xs">Step 3 — wrap your app</div>
+            <pre className="text-foreground/70">{`import { ThemeProvider, Toaster } from '@opticule/ds';
+
+export function App() {
+  return (
+    <ThemeProvider defaultTheme="system">
+      <YourApp />
+      <Toaster />
+    </ThemeProvider>
+  );
+}`}</pre>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick component example */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold">Your First Component</h2>
+        <div className="border border-border rounded-xl overflow-hidden">
+          <div className="bg-foreground/5 border-b border-border px-4 py-2.5">
+            <span className="text-xs font-mono text-foreground/50">MyComponent.tsx</span>
+          </div>
+          <pre className="p-5 text-sm overflow-x-auto">
+            <code className="text-foreground/80">{`import { Button, Input, Alert } from '@opticule/ds';
+
+export function ContactForm() {
+  return (
+    <div className="space-y-4 max-w-sm">
+      <Alert variant="info" title="We'll respond within 24 hours." />
+      <Input label="Your name" placeholder="Nze Rachi" />
+      <Input label="Email" type="email" placeholder="you@example.com" />
+      <Button variant="gradient">Send message</Button>
+    </div>
+  );
+}`}</code>
+          </pre>
+        </div>
+      </section>
+
+      {/* Design principles */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold">Core Principles</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { icon: "♿", title: "Accessible by default", desc: "Every component meets WCAG 2.1 AA. Built on Radix UI primitives with complete ARIA support." },
+            { icon: "🎨", title: "Token-driven", desc: "Three-tier token system: primitive → semantic → component. Theme switching requires zero code changes." },
+            { icon: "🔷", title: "Fully typed", desc: "Complete TypeScript types for every prop, variant, size, and event. IntelliSense works out of the box." },
+            { icon: "🧩", title: "Composable", desc: "Compound component patterns throughout. Build custom components by composing primitives." },
+            { icon: "🌙", title: "Dark mode first", desc: "Pure black (#000000) dark background. Three themes: Light, Dark, High Contrast." },
+            { icon: "📦", title: "Tree-shakeable", desc: "Import only what you use. Zero runtime style-in-JS — pure CSS custom properties." },
+          ].map((p) => (
+            <div key={p.title} className="rounded-xl border border-border p-5 space-y-2 bg-bg-secondary/10">
+              <div className="text-2xl">{p.icon}</div>
+              <p className="font-semibold text-sm">{p.title}</p>
+              <p className="text-xs text-foreground/60 leading-relaxed">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Component count summary */}
+      <section className="space-y-6">
+        <h2 className="text-2xl font-semibold">What's Included</h2>
+        <div className="rounded-xl border border-border overflow-hidden">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-border bg-foreground/5">
+                <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-foreground/50">Category</th>
+                <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-foreground/50">Components</th>
+                <th className="text-left px-4 py-3 text-xs font-semibold uppercase tracking-wider text-foreground/50">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { cat: "Buttons & Actions", comps: "Button, IconButton, ButtonGroup, CopyButton", status: "Stable" },
+                { cat: "Inputs", comps: "Input, TextArea, Select, Search, NumberInput, PasswordInput, MultiSelect, Combobox", status: "Stable" },
+                { cat: "Selection Controls", comps: "Checkbox, Switch, RadioGroup, Slider, Toggle, ToggleGroup", status: "Stable" },
+                { cat: "Data Display", comps: "Card, Avatar, Badge, Tag, Stat, Accordion, Table, Skeleton", status: "Stable" },
+                { cat: "Feedback", comps: "Alert, Spinner, ProgressBar, InlineLoading, Toast", status: "Stable" },
+                { cat: "Overlay", comps: "Tooltip, Popover, HoverCard, Modal, Drawer, AlertDialog, ContextMenu, CommandPalette", status: "Stable" },
+                { cat: "Navigation", comps: "Tabs, Breadcrumb, Pagination, DropdownMenu, Stepper, SegmentedControl, Link", status: "Stable" },
+                { cat: "Layout", comps: "VStack, HStack, Grid, Container, Divider, Spacer, AspectRatio, Center", status: "Stable" },
+                { cat: "Typography", comps: "Heading, Paragraph, Code, CodeBlock, Kbd, Blockquote, Highlight", status: "Stable" },
+                { cat: "Forms", comps: "Form, FormField, FormItem, FormLabel, FormControl, FormMessage", status: "Stable" },
+                { cat: "Media", comps: "Image", status: "Stable" },
+                { cat: "Utilities", comps: "ScrollArea, ErrorBoundary, ClientOnly, ConditionalWrap", status: "Stable" },
+                { cat: "Primitives", comps: "Box, Text, Icon, VisuallyHidden, Portal", status: "Stable" },
+                { cat: "File Upload", comps: "FileUpload", status: "Stable" },
+              ].map((row, i) => (
+                <tr key={row.cat} className={`border-b border-border last:border-0 ${i % 2 === 0 ? "" : "bg-foreground/1.5"}`}>
+                  <td className="px-4 py-3 text-xs font-medium">{row.cat}</td>
+                  <td className="px-4 py-3 text-xs text-foreground/60">{row.comps}</td>
+                  <td className="px-4 py-3">
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-green-500/10 text-green-600 dark:text-green-400 border border-green-500/20">
+                      {row.status}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  );
+}
+
+// ─── What's New ───────────────────────────────────────────────────────────────
+
+function WhatsNew() {
+  const releases = [
+    {
+      version: "v1.1.0",
+      date: "April 2026",
+      type: "Minor",
+      highlights: [
+        "Added 7 new component showcase pages (FileUpload, Toast, Link, Form, Media, Utilities, Primitives)",
+        "New Guidelines section: Accessibility, Content, Themes, Data Visualization",
+        "Patterns section expanded to 9 patterns (Dialogs, Empty States, Filtering, Forms, Loading, Notifications, Status Indicators)",
+        "Getting Started guide added to Documentation",
+        "Carbon Design System parity: full documentation depth across all 100+ components",
+      ],
+      breaking: [],
+    },
+    {
+      version: "v1.0.0",
+      date: "March 2026",
+      type: "Major",
+      highlights: [
+        "Initial public release of Opticule Design System",
+        "100+ production-ready React components",
+        "Three-tier token system: primitive → semantic → component",
+        "Light, Dark, and High Contrast themes",
+        "Complete WCAG 2.1 AA accessibility compliance",
+        "Storybook documentation site",
+        "react-hook-form + zod Form integration",
+        "Radix UI primitives throughout",
+      ],
+      breaking: [],
+    },
+  ];
+
+  return (
+    <div className="space-y-12">
+      <div className="space-y-4 mb-12 pb-8 border-b border-border">
+        <div className="flex items-center gap-2 mb-2">
+          <Sparkles className="size-5 text-brand-orange" />
+          <span className="text-sm font-medium text-foreground/60">Release Notes</span>
+        </div>
+        <h1 className="text-4xl font-bold">What's New</h1>
+        <p className="text-lg text-foreground/60 max-w-3xl leading-relaxed">
+          Release history and changelog for Opticule Design System. The project follows semantic versioning: MAJOR.MINOR.PATCH.
+        </p>
+      </div>
+
+      <div className="space-y-10">
+        {releases.map((release) => (
+          <div key={release.version} className="border border-border rounded-xl overflow-hidden">
+            <div className="flex items-center justify-between px-6 py-4 bg-foreground/5 border-b border-border">
+              <div className="flex items-center gap-3">
+                <code className="text-lg font-mono font-bold text-brand-orange">{release.version}</code>
+                <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium border ${
+                  release.type === "Major"
+                    ? "bg-brand-purple/10 text-brand-purple border-brand-purple/20"
+                    : "bg-blue-500/10 text-blue-600 dark:text-blue-400 border-blue-500/20"
+                }`}>
+                  {release.type}
+                </span>
+              </div>
+              <span className="text-sm text-foreground/50">{release.date}</span>
+            </div>
+            <div className="p-6 space-y-4">
+              <div>
+                <h3 className="text-xs font-semibold uppercase tracking-wider text-foreground/40 mb-3">Highlights</h3>
+                <ul className="space-y-2">
+                  {release.highlights.map((h) => (
+                    <li key={h} className="flex gap-2.5 text-sm text-foreground/70">
+                      <CheckCircle className="size-4 text-green-500 shrink-0 mt-0.5" />
+                      <span>{h}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              {release.breaking.length > 0 && (
+                <div>
+                  <h3 className="text-xs font-semibold uppercase tracking-wider text-brand-folly mb-3">Breaking Changes</h3>
+                  <ul className="space-y-1">
+                    {release.breaking.map((b) => (
+                      <li key={b} className="text-sm text-brand-folly/80 flex gap-2">
+                        <span className="shrink-0">⚠</span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <section className="space-y-4">
+        <h2 className="text-2xl font-semibold">Release Schedule</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {[
+            { type: "PATCH (x.x.1)", desc: "Bug fixes, documentation corrections, accessibility fixes. Released as needed — no waiting for a minor cycle.", cadence: "As needed" },
+            { type: "MINOR (x.1.x)", desc: "New components, new props, new patterns. Always backwards-compatible. No migration required.", cadence: "Monthly" },
+            { type: "MAJOR (1.x.x)", desc: "Breaking changes to component APIs, token renames, or removed components. Includes a migration guide.", cadence: "Quarterly" },
+          ].map((t) => (
+            <div key={t.type} className="rounded-xl border border-border p-5 space-y-2 bg-bg-secondary/10">
+              <code className="text-sm font-mono text-brand-orange">{t.type}</code>
+              <p className="text-xs text-foreground/60 leading-relaxed">{t.desc}</p>
+              <div className="text-[10px] font-medium text-brand-purple/80 uppercase tracking-wide">Cadence: {t.cadence}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
 }
 
 function CodeImplementation() {

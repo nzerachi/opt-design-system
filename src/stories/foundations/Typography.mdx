@@ -1,0 +1,71 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Typography" />
+
+# Typography
+
+Opticule uses **Ubuntu** as its primary typeface — a humanist sans-serif that balances technical precision with approachability. Ubuntu Mono is used for all code specimens.
+
+---
+
+## Font Families
+
+| Role | Family | Weights |
+|---|---|---|
+| Sans (default) | Ubuntu | 300, 400, 500, 700 |
+| Mono | Ubuntu Mono | 400, 700 |
+
+Both families are self-hosted as `.woff2` files — no Google Fonts CDN dependency.
+
+---
+
+## Type Scale
+
+<div style={{ fontFamily: 'Ubuntu, sans-serif', display: 'flex', flexDirection: 'column', gap: '16px' }}>
+  <div><span style={{ fontSize: '60px', fontWeight: 700, lineHeight: 1.1 }}>Display · 60px / 700</span></div>
+  <div><span style={{ fontSize: '48px', fontWeight: 700, lineHeight: 1.1 }}>H1 · 48px / 700</span></div>
+  <div><span style={{ fontSize: '40px', fontWeight: 700, lineHeight: 1.15 }}>H2 · 40px / 700</span></div>
+  <div><span style={{ fontSize: '32px', fontWeight: 700, lineHeight: 1.2 }}>H3 · 32px / 700</span></div>
+  <div><span style={{ fontSize: '24px', fontWeight: 700, lineHeight: 1.25 }}>H4 · 24px / 700</span></div>
+  <div><span style={{ fontSize: '20px', fontWeight: 700, lineHeight: 1.3 }}>H5 · 20px / 700</span></div>
+  <div><span style={{ fontSize: '16px', fontWeight: 700, lineHeight: 1.4 }}>H6 · 16px / 700</span></div>
+  <div><span style={{ fontSize: '18px', fontWeight: 400, lineHeight: 1.6 }}>Body Large · 18px / 400</span></div>
+  <div><span style={{ fontSize: '16px', fontWeight: 400, lineHeight: 1.6 }}>Body · 16px / 400</span></div>
+  <div><span style={{ fontSize: '14px', fontWeight: 400, lineHeight: 1.5 }}>Body Small · 14px / 400</span></div>
+  <div><span style={{ fontSize: '12px', fontWeight: 500, lineHeight: 1.4 }}>Label · 12px / 500</span></div>
+  <div><span style={{ fontSize: '11px', fontWeight: 500, lineHeight: 1.4 }}>Caption · 11px / 500</span></div>
+  <div><span style={{ fontFamily: 'Ubuntu Mono, monospace', fontSize: '14px', fontWeight: 400, lineHeight: 1.6, background: '#f0f0f0', padding: '4px 8px', borderRadius: '4px' }}>Code · 14px / Ubuntu Mono 400</span></div>
+</div>
+
+---
+
+## Font Weight Scale
+
+| Token | Value | Usage |
+|---|---|---|
+| `font-light` | 300 | Decorative large headings |
+| `font-normal` | 400 | Body text, descriptions |
+| `font-medium` | 500 | Labels, captions, UI text |
+| `font-bold` | 700 | Headings, emphasis |
+
+---
+
+## Line Heights
+
+| Scale | Value | Usage |
+|---|---|---|
+| `leading-none` | 1 | Display-size headings |
+| `leading-tight` | 1.1–1.25 | H1–H4 |
+| `leading-snug` | 1.375 | H5–H6 |
+| `leading-normal` | 1.5 | UI text, labels |
+| `leading-relaxed` | 1.6 | Body prose |
+| `leading-loose` | 2 | Spacious text blocks |
+
+---
+
+## Usage Guidelines
+
+- Use `Heading` component for all heading-level text (h1–h6).
+- Use `Text` component for body, label, and caption variants.
+- Never use raw `<h1>`–`<p>` tags inside components — go through the typography system.
+- Code and monospace text always uses Ubuntu Mono via `font-mono` utility class.

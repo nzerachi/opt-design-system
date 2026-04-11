@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Spacing" />
+
+# Spacing
+
+Opticule uses a **4px base unit** spacing scale. All spacing tokens are multiples of 4px, ensuring consistent rhythm throughout the UI.
+
+---
+
+## Spacing Scale
+
+<div style={{ fontFamily: 'Ubuntu, sans-serif', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+  {[
+    [0,   '0px'],
+    [1,   '4px'],
+    [2,   '8px'],
+    [3,   '12px'],
+    [4,   '16px'],
+    [5,   '20px'],
+    [6,   '24px'],
+    [8,   '32px'],
+    [10,  '40px'],
+    [12,  '48px'],
+    [16,  '64px'],
+    [20,  '80px'],
+    [24,  '96px'],
+  ].map(([step, px]) => (
+    <div key={step} style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+      <span style={{ width: '40px', fontSize: '12px', color: '#737373', textAlign: 'right', fontFamily: 'Ubuntu Mono, monospace' }}>{step}</span>
+      <div style={{ width: `${parseInt(px)}px`, minWidth: '4px', height: '24px', background: '#ff8000', borderRadius: '2px' }} />
+      <span style={{ fontSize: '12px', color: '#737373', fontFamily: 'Ubuntu Mono, monospace' }}>{px}</span>
+    </div>
+  ))}
+</div>
+
+---
+
+## Named Aliases
+
+| Alias | Step | Value | Usage |
+|---|---|---|---|
+| `xs` | 2 | 8px | Tight gaps, icon padding |
+| `sm` | 3 | 12px | Small gaps, compact UI |
+| `md` | 4 | 16px | Default padding, gaps |
+| `lg` | 6 | 24px | Section padding |
+| `xl` | 8 | 32px | Large section gaps |
+| `2xl` | 12 | 48px | Page-level sections |
+| `3xl` | 16 | 64px | Hero sections |
+
+---
+
+## Usage
+
+Use Tailwind spacing utilities (`p-4`, `gap-6`, `mt-8`) which map directly to this scale. All components in Opticule DS use tokens from this scale — no arbitrary pixel values.

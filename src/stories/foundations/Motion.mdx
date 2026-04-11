@@ -1,0 +1,55 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Motion" />
+
+# Motion
+
+Motion in Opticule serves a purpose: it guides attention, communicates state changes, and provides spatial context. All animations are disabled when `prefers-reduced-motion: reduce` is detected.
+
+---
+
+## Easing Curves
+
+| Name | Value | Usage |
+|---|---|---|
+| `ease-in` | `cubic-bezier(0.4, 0, 1, 1)` | Elements leaving the screen |
+| `ease-out` | `cubic-bezier(0, 0, 0.2, 1)` | Elements entering the screen |
+| `ease-in-out` | `cubic-bezier(0.4, 0, 0.2, 1)` | Elements moving within the screen |
+| `ease-spring` | `cubic-bezier(0.34, 1.56, 0.64, 1)` | Playful, bouncy interactions |
+
+---
+
+## Duration Scale
+
+| Token | Value | Usage |
+|---|---|---|
+| `duration-instant` | 0ms | State changes without animation |
+| `duration-fast` | 100ms | Micro-interactions (checkbox check, button press) |
+| `duration-normal` | 200ms | Standard transitions (hover, focus) |
+| `duration-slow` | 300ms | UI elements entering/leaving (modal, drawer) |
+| `duration-slower` | 500ms | Complex animations, skeleton loading |
+
+---
+
+## Built-in Keyframes
+
+These keyframes are pre-registered in `globals.css` and used by components:
+
+<div style={{ display: 'flex', flexDirection: 'column', gap: '12px', fontFamily: 'Ubuntu Mono, monospace', fontSize: '13px' }}>
+  <code>fade-in / fade-out — opacity 0 → 1</code>
+  <code>scale-in / scale-out — scale(0.95) → scale(1)</code>
+  <code>slide-in-from-top/bottom/left/right — translateY/X offsets</code>
+  <code>shimmer — skeleton loading gradient sweep</code>
+  <code>spin — full 360° rotation (spinners)</code>
+  <code>pulse-scale — scale pulse for attention</code>
+  <code>accordion-down / accordion-up — height 0 → content height</code>
+</div>
+
+---
+
+## Principles
+
+1. **Enter slow, exit fast** — entrances use `ease-out` (decelerate into place), exits use `ease-in` (accelerate away).
+2. **300ms maximum** — anything longer feels sluggish in a UI. Reserve longer durations for skeleton loading.
+3. **Purpose over decoration** — only animate when it communicates state (loading, success, error, open/closed).
+4. **Respect user preferences** — all animations are wrapped in `@media (prefers-reduced-motion: no-preference)`.

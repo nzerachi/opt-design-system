@@ -1,0 +1,78 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Getting Started" />
+
+# Opticule Design System
+
+A world-class, production-grade component library built for React + TypeScript. Rivaling IBM Carbon, Shopify Polaris, Adobe Spectrum, and GitHub Primer.
+
+---
+
+## Installation
+
+```bash
+# From the workspace root (monorepo)
+npm install
+
+# Or if published
+npm install @opticule/ds
+```
+
+## Setup
+
+Wrap your app in `ThemeProvider` and add the `Toaster` for notifications:
+
+```tsx
+import { ThemeProvider, Toaster } from '@opticule/ds';
+import '@opticule/ds/styles';
+
+export function App() {
+  return (
+    <ThemeProvider defaultTheme="system" storageKey="my-app-theme">
+      <YourApp />
+      <Toaster />
+    </ThemeProvider>
+  );
+}
+```
+
+## Theming
+
+The system ships with three themes — `light`, `dark`, and `high-contrast`. Use the toolbar at the top of this page to switch between them on all stories.
+
+```tsx
+import { useTheme } from '@opticule/ds';
+
+function ThemeSwitcher() {
+  const { theme, setTheme } = useTheme();
+  return (
+    <button onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+      Toggle theme
+    </button>
+  );
+}
+```
+
+## Key Principles
+
+- **Accessible by default** — every interactive component meets WCAG 2.1 AA, built on Radix UI primitives
+- **Token-driven** — three-tier token system: primitive → semantic → component
+- **Fully typed** — complete TypeScript types for all props, variants, and sizes
+- **Composable** — compound component patterns throughout (Card + CardHeader + CardTitle)
+- **Dark mode first** — pure black (#000000) dark background, no half-measures
+
+## Component Count
+
+| Category | Components |
+|---|---|
+| Primitives | Box, Text, Heading, Icon, VisuallyHidden, Portal |
+| Layout | Stack, Container, Grid, Divider, Spacer, Center, AspectRatio |
+| Inputs | Button, Input, Select, Checkbox, Switch, Radio, Slider, Search, Tag, Toggle, FileUpload, + more |
+| Data Display | Card, Avatar, Skeleton, Table, Accordion, Stat |
+| Feedback | Alert, Spinner, ProgressBar, Toast, InlineLoading |
+| Overlay | Modal, Drawer, Tooltip, Popover, AlertDialog, ContextMenu, HoverCard, CommandPalette |
+| Navigation | Tabs, Breadcrumb, Pagination, Dropdown, Stepper, SegmentedControl, Link |
+| Forms | Form (RHF + Zod integration), Fieldset |
+| Typography | Paragraph, Blockquote, Code, Kbd, Highlight |
+| Media | Image |
+| Utilities | ScrollArea, ErrorBoundary, ClientOnly, ConditionalWrap |

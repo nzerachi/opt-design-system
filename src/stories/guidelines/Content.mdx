@@ -1,0 +1,96 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guidelines/Content" />
+
+# Content Guidelines
+
+Clear, concise, and human-centered copy helps users complete tasks without friction.
+
+---
+
+## Voice & Tone
+
+### Our Voice (constant)
+
+| Trait | Description |
+|---|---|
+| **Clear** | Plain language. No jargon unless the user is a domain expert. |
+| **Confident** | Say what the product does. Avoid 'might', 'could', 'perhaps'. |
+| **Human** | Write like a knowledgeable colleague, not a legal document. |
+| **Inclusive** | Gender-neutral. Avoid idioms that don't translate. |
+
+### Tone (adapts by context)
+
+| Context | Tone |
+|---|---|
+| Onboarding | Warm, encouraging, celebratory |
+| Errors | Direct, apologetic, solution-focused |
+| Warnings | Cautious, informative, non-alarming |
+| Empty states | Motivating, helpful, actionable |
+| Destructive actions | Serious, unambiguous |
+
+---
+
+## Action Labels
+
+Buttons and links must clearly communicate what will happen.
+
+**Rules:**
+- Use verb + noun: `Save changes`, `Delete account`, `Export CSV`
+- Confirm dialogs echo the action: if the button says `Delete`, the dialog confirm says `Delete`
+- Keep labels under 4 words
+- Never use `Click here`, `Submit`, `OK`, `Yes` alone
+
+**Examples:**
+
+| ✗ Avoid | ✓ Do |
+|---|---|
+| Click here to proceed | Continue to checkout |
+| Submit | Create account |
+| Yes | Delete file |
+| OK | Got it |
+| Learn more | View pricing details |
+
+---
+
+## Error Messages
+
+Errors are help text — not blame.
+
+**Rules:**
+- Identify the specific problem: _"Email address is already in use"_
+- Tell the user how to fix it: _"Use a different email or sign in"_
+- Be specific about constraints: _"Password must be at least 8 characters"_
+- Place the error next to the field that caused it
+
+| ✗ Avoid | ✓ Do |
+|---|---|
+| Something went wrong. | Your session has expired. Sign in again. |
+| Invalid input | Password must be at least 8 characters |
+| Error | Email address is already in use |
+
+---
+
+## Sentence Case
+
+Use sentence case everywhere in the UI. Only proper nouns, product names, and acronyms are capitalized.
+
+| ✗ Title Case (avoid) | ✓ Sentence case |
+|---|---|
+| Save Changes | Save changes |
+| Upload A File | Upload a file |
+| Design Foundations | Design foundations |
+
+---
+
+## Numbers & Formatting
+
+| Situation | Format | Example |
+|---|---|---|
+| Numbers 1–9 in prose | Spell out | three items |
+| Numbers 10+ in prose | Numerals | 24 components |
+| File sizes | KB / MB / GB | 4.2 MB |
+| Percentages | Symbol, no space | 75% |
+| Currency | Symbol + 2 decimals | $89.00 |
+| Dates | MMM D, YYYY | Apr 11, 2026 |
+| Time | 12h with am/pm | 2:30 pm |

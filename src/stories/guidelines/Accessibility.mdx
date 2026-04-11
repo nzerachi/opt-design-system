@@ -1,0 +1,105 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guidelines/Accessibility" />
+
+# Accessibility
+
+Opticule DS is built accessible by default. Every interactive component meets WCAG 2.1 AA, uses semantic HTML, and is fully operable by keyboard, screen reader, and pointer.
+
+---
+
+## WCAG 2.1 Compliance Targets
+
+| Level | Coverage |
+|---|---|
+| **A** | All components |
+| **AA** | All components (target standard) |
+| **AAA** | Where practical (high-contrast theme) |
+
+---
+
+## Color & Contrast
+
+All text and interactive elements meet WCAG 2.1 AA contrast ratios.
+
+| Element | Minimum ratio | Standard |
+|---|---|---|
+| Normal text (< 18px) | 4.5:1 | AA |
+| Large text (≥ 18px bold) | 3:1 | AA |
+| UI components & graphics | 3:1 | AA |
+| Enhanced text | 7:1 | AAA |
+
+**Rule:** Color is never the only conveyor of meaning. Always pair color with a label, icon, or pattern.
+
+---
+
+## Keyboard Navigation
+
+Every interactive component is keyboard-accessible. Standard patterns:
+
+| Key | Action |
+|---|---|
+| `Tab` | Move focus forward |
+| `Shift + Tab` | Move focus backward |
+| `Enter` | Activate buttons and links |
+| `Space` | Toggle checkboxes, open selects |
+| `Escape` | Close overlays (Modal, Drawer, Popover) |
+| `Arrow keys` | Navigate within compound widgets |
+| `Home / End` | Jump to first/last in lists |
+
+**Rule:** Never remove `outline` without providing a visible custom focus style.
+
+---
+
+## ARIA Patterns
+
+Components use the following ARIA roles:
+
+| Role | Component(s) |
+|---|---|
+| `role="button"` | IconButton, CopyButton |
+| `role="dialog"` | Modal, AlertDialog |
+| `role="alertdialog"` | AlertDialog (destructive) |
+| `role="switch"` | Switch |
+| `role="radiogroup"` | RadioGroup, SegmentedControl |
+| `role="slider"` | Slider |
+| `role="tablist"` / `role="tab"` | Tabs |
+| `role="status"` | Badge (status variant) |
+| `role="alert"` | Alert (error/warning) |
+| `aria-live="polite"` | InlineLoading, FileUpload |
+
+---
+
+## Accessible Names
+
+```tsx
+{/* Icon-only button — always provide aria-label */}
+<IconButton icon={<Trash2 />} label="Delete item" />
+
+{/* Decorative icon — aria-hidden */}
+<ChevronDown aria-hidden="true" />
+
+{/* Form field — visible label */}
+<label htmlFor="email">Email address</label>
+<input id="email" type="email" />
+```
+
+---
+
+## Testing Checklist
+
+- [ ] All interactive elements reachable by `Tab`
+- [ ] `Escape` closes all overlays
+- [ ] Color contrast ≥ 4.5:1 for normal text
+- [ ] Color is not the sole conveyor of meaning
+- [ ] Error messages identify the field and describe the fix
+- [ ] Tested with keyboard-only navigation
+- [ ] Tested with VoiceOver or NVDA
+
+---
+
+## Resources
+
+- Run `@storybook/addon-a11y` in this Storybook to audit stories with Axe
+- Use `useReducedMotion()` from the hooks library to respect `prefers-reduced-motion`
+- All components are built on [Radix UI](https://www.radix-ui.com/) which implements WAI-ARIA patterns by default

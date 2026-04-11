@@ -1,0 +1,50 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundations/Colors" />
+
+# Colors
+
+Opticule's color system is built on three brand primaries — **Orange**, **Purple**, and **Folly** — expressed through a full perceptual scale from 50 to 950. Semantic tokens map these primitives to meaningful roles: background, foreground, border, interactive, and status.
+
+---
+
+## Brand Primaries
+
+<ColorPalette>
+  <ColorItem title="Brand Orange" subtitle="brand-orange · #ff8000" colors={{ '50': '#fff3e6', '100': '#ffd9a6', '200': '#ffbf66', '300': '#ffa633', '400': '#ff9310', '500': '#ff8000', '600': '#e07000', '700': '#b35900', '800': '#804000', '900': '#4d2600', '950': '#291400' }} />
+  <ColorItem title="Brand Purple" subtitle="brand-purple · #cc33ff" colors={{ '50': '#f9e6ff', '100': '#f1c1ff', '200': '#e699ff', '300': '#da66ff', '400': '#d44dff', '500': '#cc33ff', '600': '#b800f0', '700': '#9200c2', '800': '#6c0091', '900': '#480060', '950': '#2e003e' }} />
+  <ColorItem title="Brand Folly" subtitle="brand-folly · #ff004f" colors={{ '50': '#ffe6ed', '100': '#ffb3c6', '200': '#ff80a0', '300': '#ff4d7a', '400': '#ff2663', '500': '#ff004f', '600': '#e0003f', '700': '#b3002f', '800': '#800020', '900': '#4d0012', '950': '#290009' }} />
+</ColorPalette>
+
+---
+
+## Neutral Scale
+
+<ColorPalette>
+  <ColorItem title="Neutral" subtitle="Used for backgrounds, text, and borders" colors={{ 'white': '#ffffff', '50': '#f5f5f5', '100': '#e5e5e5', '200': '#d4d4d4', '300': '#a3a3a3', '400': '#737373', '500': '#808080', '600': '#525252', '700': '#404040', '800': '#262626', '900': '#171717', '950': '#0d0d0d', 'black': '#000000' }} />
+</ColorPalette>
+
+---
+
+## Semantic Tokens
+
+These tokens are what components consume — they automatically switch between light and dark themes.
+
+| Token | Light | Dark | Usage |
+|---|---|---|---|
+| `--background` | `#ffffff` | `#000000` | Page background |
+| `--foreground` | `#000000` | `#ffffff` | Primary text |
+| `--muted-light` | `#f0f0f0` | `#1a1a1a` | Subtle backgrounds |
+| `--border` | `#e5e5e5` | `#262626` | Dividers, outlines |
+| `--brand-orange` | `#ff8000` | `#ff8000` | Interactive focus, CTAs |
+| `--brand-purple` | `#cc33ff` | `#cc33ff` | Success, accent |
+| `--brand-folly` | `#ff004f` | `#ff004f` | Errors, destructive |
+
+---
+
+## Usage Guidelines
+
+- **Never** use raw hex values in components — always use CSS custom properties (`var(--brand-orange)`) or Tailwind classes (`text-brand-orange`).
+- Brand Orange (`#ff8000`) is the **primary interactive color** — focus rings, active states, CTAs.
+- Brand Purple (`#cc33ff`) represents **success** and positive states (not green, per Opticule's brand).
+- Brand Folly (`#ff004f`) is used exclusively for **errors and destructive actions**.

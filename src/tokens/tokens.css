@@ -1,0 +1,355 @@
+/**
+ * Opticule Design System — Token CSS
+ *
+ * Standalone CSS custom properties for non-React consumers.
+ * Generated from src/tokens/themes/light.ts and dark.ts.
+ *
+ * Usage:
+ *   import 'opticule-ds/css';
+ *   -- or --
+ *   <link rel="stylesheet" href="tokens.css" />
+ */
+
+/* ============================================================
+   :root — Light Theme (default)
+   ============================================================ */
+:root {
+  /* --- Legacy compat vars (Opticule globals.css API) --- */
+  --background:      0 0% 100%;
+  --obackground:     0 0% 95%;
+  --foreground:      0 0% 0%;
+  --muted-light:     0 0% 85%;
+  --muted-dark:      0 0% 50%;
+  --destructive:     340 100% 50%;
+  --border:          0 0% 90%;
+  --input:           0 0% 90%;
+  --ring:            0 0% 10%;
+  --radius:          0.5rem;
+
+  /* --- Brand (static) --- */
+  --color-brand-purple: #cc33ff;
+  --color-brand-folly:  #ff004f;
+  --color-brand-orange: #ff8000;
+
+  /* --- Backgrounds --- */
+  --bg-primary:      0 0% 100%;
+  --bg-secondary:    0 0% 97%;
+  --bg-tertiary:     0 0% 95%;
+  --bg-inverse:      0 0% 0%;
+  --bg-card:         0 0% 100%;
+  --bg-popover:      0 0% 100%;
+  --bg-muted:        0 0% 85%;
+  --bg-brand:        rgba(255, 128, 0, 0.08);
+  --bg-error:        rgba(255, 0, 79, 0.08);
+  --bg-warning:      rgba(255, 128, 0, 0.08);
+  --bg-success:      rgba(204, 51, 255, 0.08);
+  --bg-info:         rgba(59, 130, 246, 0.08);
+  --bg-glass:        rgba(255, 255, 255, 0.50);
+  --bg-input:        rgba(128, 128, 128, 0.10);
+
+  /* --- Text --- */
+  --text-primary:    0 0% 0%;
+  --text-secondary:  0 0% 25%;
+  --text-tertiary:   0 0% 50%;
+  --text-disabled:   0 0% 60%;
+  --text-inverse:    0 0% 100%;
+  --text-link:       #cc33ff;
+  --text-error:      #ff004f;
+  --text-success:    #cc33ff;
+  --text-warning:    #ff8000;
+  --text-info:       #3b82f6;
+  --text-on-brand:   #ffffff;
+  --text-brand:      #ff8000;
+
+  /* --- Borders --- */
+  --border-default:  0 0% 90%;
+  --border-strong:   0 0% 70%;
+  --border-disabled: 0 0% 85%;
+  --border-focus:    #ff8000;
+  --border-error:    #ff004f;
+  --border-success:  #cc33ff;
+  --border-warning:  #ff8000;
+  --border-inverse:  0 0% 18%;
+
+  /* --- Interactive --- */
+  --interactive-primary:         0 0% 0%;
+  --interactive-primary-hover:   0 0% 15%;
+  --interactive-primary-active:  0 0% 20%;
+  --interactive-secondary:       0 0% 97%;
+  --interactive-secondary-hover: 0 0% 95%;
+  --interactive-disabled:        0 0% 60%;
+  --interactive-brand:           #ff8000;
+  --interactive-brand-hover:     #e67200;
+
+  /* --- Focus --- */
+  --focus-ring:   0 0% 10%;
+  --focus-shadow: 0 0 0 3px rgba(255, 128, 0, 0.30);
+
+  /* --- Overlays --- */
+  --overlay-backdrop: rgba(0, 0, 0, 0.50);
+  --overlay-heavy:    rgba(0, 0, 0, 0.80);
+
+  /* --- Shadows (light) --- */
+  --shadow-xs:    0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm:    0 1px 3px 0 rgba(0, 0, 0, 0.10), 0 1px 2px -1px rgba(0, 0, 0, 0.10);
+  --shadow-md:    0 4px 6px -1px rgba(0, 0, 0, 0.10), 0 2px 4px -2px rgba(0, 0, 0, 0.10);
+  --shadow-lg:    0 10px 15px -3px rgba(0, 0, 0, 0.10), 0 4px 6px -4px rgba(0, 0, 0, 0.10);
+  --shadow-xl:    0 20px 25px -5px rgba(0, 0, 0, 0.10), 0 8px 10px -6px rgba(0, 0, 0, 0.10);
+  --shadow-2xl:   0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+
+  /* --- Z-Index scale --- */
+  --z-behind:        -1;
+  --z-base:          0;
+  --z-raised:        1;
+  --z-docked:        10;
+  --z-dropdown:      100;
+  --z-sticky:        200;
+  --z-banner:        300;
+  --z-overlay:       400;
+  --z-drawer:        500;
+  --z-fixed:         600;
+  --z-toast:         700;
+  --z-modal-backdrop: 800;
+  --z-modal:         900;
+  --z-popover:       1000;
+  --z-tooltip:       1100;
+  --z-spotlight:     1200;
+  --z-always-on-top: 1300;
+
+  /* --- Motion --- */
+  --duration-instant:   0ms;
+  --duration-ultra-fast: 75ms;
+  --duration-fast:      100ms;
+  --duration-normal:    150ms;
+  --duration-moderate:  200ms;
+  --duration-slow:      300ms;
+  --duration-slower:    400ms;
+  --duration-slowest:   500ms;
+
+  --ease-linear:    linear;
+  --ease-in:        cubic-bezier(0.4, 0, 1, 1);
+  --ease-out:       cubic-bezier(0, 0, 0.2, 1);
+  --ease-in-out:    cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring:    cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --ease-bounce:    cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* --- Spacing scale --- */
+  --space-0:   0px;
+  --space-px:  1px;
+  --space-0_5: 2px;
+  --space-1:   4px;
+  --space-1_5: 6px;
+  --space-2:   8px;
+  --space-2_5: 10px;
+  --space-3:   12px;
+  --space-3_5: 14px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-7:   28px;
+  --space-8:   32px;
+  --space-9:   36px;
+  --space-10:  40px;
+  --space-11:  44px;
+  --space-12:  48px;
+  --space-14:  56px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+
+  /* --- Border radius --- */
+  --radius-none:  0px;
+  --radius-xs:    2px;
+  --radius-sm:    4px;
+  --radius-md:    6px;
+  --radius-lg:    8px;   /* DEFAULT — all Opticule components */
+  --radius-xl:    12px;
+  --radius-2xl:   16px;
+  --radius-3xl:   24px;
+  --radius-full:  9999px;
+
+  /* --- Typography --- */
+  --font-sans: "Ubuntu", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Ubuntu Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  --font-size-2xs:  0.6875rem;
+  --font-size-xs:   0.75rem;
+  --font-size-sm:   0.875rem;
+  --font-size-md:   1rem;
+  --font-size-lg:   1.125rem;
+  --font-size-xl:   1.25rem;
+  --font-size-2xl:  1.5rem;
+  --font-size-3xl:  1.875rem;
+  --font-size-4xl:  2rem;
+  --font-size-5xl:  2.5rem;
+  --font-size-6xl:  3rem;
+  --font-size-7xl:  3.75rem;
+  --font-size-8xl:  4.5rem;
+  --font-size-9xl:  6rem;
+
+  --font-weight-light:   300;
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-bold:    700;
+
+  --line-height-none:    1;
+  --line-height-tight:   1.2;
+  --line-height-snug:    1.25;
+  --line-height-normal:  1.5;
+  --line-height-relaxed: 1.6;
+  --line-height-loose:   1.75;
+}
+
+/* ============================================================
+   .dark — Dark Theme
+   ============================================================ */
+.dark {
+  --background:      0 0% 0%;
+  --obackground:     0 0% 10%;
+  --foreground:      0 0% 100%;
+  --muted-light:     0 0% 15%;
+  --muted-dark:      0 0% 50%;
+  --destructive:     340 100% 50%;
+  --border:          0 0% 18%;
+  --input:           0 0% 18%;
+  --ring:            0 0% 80%;
+
+  --bg-primary:      0 0% 0%;
+  --bg-secondary:    0 0% 7%;
+  --bg-tertiary:     0 0% 10%;
+  --bg-inverse:      0 0% 100%;
+  --bg-card:         0 0% 7%;
+  --bg-popover:      0 0% 7%;
+  --bg-muted:        0 0% 15%;
+  --bg-brand:        rgba(255, 128, 0, 0.10);
+  --bg-error:        rgba(255, 0, 79, 0.10);
+  --bg-warning:      rgba(255, 128, 0, 0.10);
+  --bg-success:      rgba(204, 51, 255, 0.10);
+  --bg-info:         rgba(59, 130, 246, 0.10);
+  --bg-glass:        rgba(0, 0, 0, 0.50);
+  --bg-input:        rgba(255, 255, 255, 0.06);
+
+  --text-primary:    0 0% 100%;
+  --text-secondary:  0 0% 75%;
+  --text-tertiary:   0 0% 50%;
+  --text-disabled:   0 0% 40%;
+  --text-inverse:    0 0% 0%;
+  --text-link:       #d44dff;
+  --text-error:      #ff4d88;
+  --text-success:    #d44dff;
+  --text-warning:    #ffa326;
+  --text-info:       #60a5fa;
+  --text-on-brand:   #ffffff;
+  --text-brand:      #ffa326;
+
+  --border-default:  0 0% 18%;
+  --border-strong:   0 0% 30%;
+  --border-disabled: 0 0% 18%;
+  --border-focus:    #ff8000;
+  --border-inverse:  0 0% 90%;
+
+  --interactive-primary:         0 0% 100%;
+  --interactive-primary-hover:   0 0% 90%;
+  --interactive-primary-active:  0 0% 85%;
+  --interactive-secondary:       0 0% 10%;
+  --interactive-secondary-hover: 0 0% 15%;
+  --interactive-disabled:        0 0% 40%;
+  --interactive-brand:           #ff8000;
+  --interactive-brand-hover:     #ffa326;
+
+  --focus-ring:   0 0% 80%;
+  --focus-shadow: 0 0 0 3px rgba(255, 128, 0, 0.40);
+
+  --overlay-backdrop: rgba(0, 0, 0, 0.70);
+  --overlay-heavy:    rgba(0, 0, 0, 0.90);
+
+  --shadow-xs:    0 1px 2px 0 rgba(0, 0, 0, 0.30);
+  --shadow-sm:    0 1px 3px 0 rgba(0, 0, 0, 0.40), 0 1px 2px -1px rgba(0, 0, 0, 0.40);
+  --shadow-md:    0 4px 6px -1px rgba(0, 0, 0, 0.40), 0 2px 4px -2px rgba(0, 0, 0, 0.40);
+  --shadow-lg:    0 10px 15px -3px rgba(0, 0, 0, 0.50), 0 4px 6px -4px rgba(0, 0, 0, 0.40);
+  --shadow-xl:    0 20px 25px -5px rgba(0, 0, 0, 0.50), 0 8px 10px -6px rgba(0, 0, 0, 0.40);
+  --shadow-2xl:   0 25px 50px -12px rgba(0, 0, 0, 0.70);
+  --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.30);
+}
+
+/* ============================================================
+   .high-contrast — High Contrast Theme (WCAG AAA)
+   ============================================================ */
+.high-contrast {
+  --bg-primary:      0 0% 100%;
+  --bg-secondary:    0 0% 100%;
+  --bg-tertiary:     0 0% 96%;
+  --bg-card:         0 0% 100%;
+  --bg-muted:        0 0% 93%;
+  --bg-input:        0 0% 100%;
+
+  --text-primary:    0 0% 0%;
+  --text-secondary:  0 0% 0%;
+  --text-tertiary:   0 0% 15%;
+  --text-disabled:   0 0% 30%;
+  --text-link:       #5500cc;
+  --text-error:      #c80000;
+  --text-success:    #007000;
+  --text-warning:    #7a4000;
+  --text-info:       #0050cc;
+
+  --border-default:  0 0% 0%;
+  --border-strong:   0 0% 0%;
+  --border-disabled: 0 0% 40%;
+  --border-focus:    0 0% 0%;
+
+  --interactive-primary:         0 0% 0%;
+  --interactive-primary-hover:   0 0% 20%;
+  --interactive-primary-active:  0 0% 30%;
+
+  --focus-ring:   0 0% 0%;
+  --focus-shadow: 0 0 0 3px #000000;
+
+  --shadow-sm:  0 0 0 2px #000000;
+  --shadow-md:  0 0 0 2px #000000;
+  --shadow-lg:  0 0 0 2px #000000;
+  --shadow-2xl: 0 0 0 3px #000000;
+}
+
+/* ============================================================
+   Prefers-color-scheme — auto dark mode (when theme = "system")
+   Applied only if no explicit .dark or .light class is set.
+   The ThemeProvider class toggle takes precedence via specificity.
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light):not(.dark):not(.high-contrast) {
+    --background:      0 0% 0%;
+    --obackground:     0 0% 10%;
+    --foreground:      0 0% 100%;
+    --muted-light:     0 0% 15%;
+    --muted-dark:      0 0% 50%;
+    --border:          0 0% 18%;
+    --input:           0 0% 18%;
+    --ring:            0 0% 80%;
+    --bg-primary:      0 0% 0%;
+    --bg-card:         0 0% 7%;
+    --bg-muted:        0 0% 15%;
+    --text-primary:    0 0% 100%;
+    --text-secondary:  0 0% 75%;
+    --text-inverse:    0 0% 0%;
+    --border-default:  0 0% 18%;
+    --interactive-primary:       0 0% 100%;
+    --interactive-primary-hover: 0 0% 90%;
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.50), 0 4px 6px -4px rgba(0, 0, 0, 0.40);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.70);
+  }
+}
+
+/* ============================================================
+   Prefers high contrast — auto high contrast mode
+   ============================================================ */
+@media (prefers-contrast: more) {
+  :root:not(.light):not(.dark):not(.high-contrast) {
+    --text-primary:    0 0% 0%;
+    --text-secondary:  0 0% 0%;
+    --border-default:  0 0% 0%;
+    --border-strong:   0 0% 0%;
+    --focus-shadow:    0 0 0 3px #000000;
+  }
+}

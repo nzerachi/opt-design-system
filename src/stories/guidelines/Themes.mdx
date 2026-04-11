@@ -1,0 +1,107 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guidelines/Themes" />
+
+# Themes
+
+Opticule DS ships three built-in themes driven by the same three-tier token system. Switching themes requires zero component code changes.
+
+---
+
+## Built-in Themes
+
+| Theme | Background | Use case |
+|---|---|---|
+| **Light** | `#FFFFFF` | Default — well-lit environments, consumer products |
+| **Dark** | `#000000` | Low-light, developer tools, immersive UIs |
+| **High Contrast** | `#000000` + AAA contrast | Accessibility — low vision, cognitive differences |
+| **System** | Follows OS | Auto-adapts to user's OS preference |
+
+Switch themes in this Storybook using the theme toolbar at the top of the page.
+
+---
+
+## Token System
+
+Themes are implemented via three layers of CSS custom properties:
+
+```
+Primitive tokens   →   raw values (brand colors, neutral scale, shadows)
+      ↓
+Semantic tokens    →   meaning-aware aliases (--color-background, --color-foreground)
+      ↓
+Component tokens   →   scoped overrides (--button-primary-bg, --input-radius)
+```
+
+**Rule:** Always use semantic tokens in component code — never primitive values directly.
+
+```css
+/* ✓ Semantic token — adapts to all themes */
+.card { background: var(--color-background); }
+
+/* ✗ Primitive hardcode — breaks in dark mode */
+.card { background: #FFFFFF; }
+```
+
+---
+
+## Setup
+
+```tsx
+import { ThemeProvider, Toaster } from "@opticule/ds";
+import "@opticule/ds/styles";
+
+export function App() {
+  return (
+    <ThemeProvider defaultTheme="system" storageKey="opticule-theme">
+      <YourApp />
+      <Toaster />
+    </ThemeProvider>
+  );
+}
+```
+
+### ThemeProvider Props
+
+| Prop | Type | Default | Description |
+|---|---|---|---|
+| `defaultTheme` | `"light" \| "dark" \| "high-contrast" \| "system"` | `"system"` | Initial theme |
+| `storageKey` | `string` | `"opticule-theme"` | localStorage key for persistence |
+
+---
+
+## Switching Themes Programmatically
+
+```tsx
+import { useTheme } from "@opticule/ds";
+
+function ThemeSwitcher() {
+  const { theme, setTheme } = useTheme();
+  return (
+    <button onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+      Toggle theme
+    </button>
+  );
+}
+```
+
+---
+
+## Customizing Tokens
+
+Override any semantic token in your project CSS:
+
+```css
+/* globals.css */
+:root {
+  --color-brand-orange: #E57400;
+  --color-brand-purple: #9B33FF;
+  --color-background: #F8F7F5;
+  --button-radius: 9999px; /* pill buttons */
+}
+
+.dark {
+  --color-background: #0D0D0D;
+  --color-foreground: #F0EDE8;
+}
+```

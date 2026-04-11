@@ -1,0 +1,98 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Guidelines/Data Visualization" />
+
+# Data Visualization
+
+Guidelines for presenting data clearly, accessibly, and consistently.
+
+---
+
+## Choosing the Right Chart Type
+
+| Chart Type | Use When | Avoid When |
+|---|---|---|
+| **Bar / Column** | Comparing values across discrete categories | Showing change over time (use Line instead) |
+| **Line** | Showing change over continuous data (time) | Comparing categorical values |
+| **Area** | Cumulative totals or volume over time | Precise value comparison |
+| **Pie / Donut** | Parts of a whole (max 5–6 slices) | More than 6 slices; negative values |
+| **Scatter** | Correlation between two variables | Categorical data |
+| **Stat / Metric** | Highlighting a single key KPI | Multiple related metrics (use table) |
+
+---
+
+## Color in Charts
+
+**Use the approved data palette in order:**
+
+1. `#FF8000` — Primary (brand orange)
+2. `#CC33FF` — Secondary (brand purple)
+3. `#FF004F` — Tertiary (brand folly)
+4. `#3B82F6` — Info (blue-500)
+5. `#22C55E` — Success (green-500)
+6. `#EAB308` — Warning (yellow-500)
+
+**Rules:**
+- Don't use red and green together without additional differentiation (8% of men have red-green color blindness)
+- Max 6–8 categorical colors per chart
+- Pair each series with a distinct shape or pattern in addition to color
+- Always include a legend or direct data labels
+
+---
+
+## Labeling & Axes
+
+**Do:**
+- Include a chart title that states the insight: _"Sales grew 42% YoY"_
+- Label axes with name and unit: _"Revenue ($)"_ not _"Revenue"_
+- Show data labels for fewer than 10 data points
+- Use concise formatting: `1.2M` not `1,200,000`
+
+**Don't:**
+- Start the Y-axis above zero on bar charts
+- Use 3D effects (they distort perceived values)
+- Use angled axis labels when horizontal ones fit
+
+---
+
+## Accessibility
+
+```tsx
+<figure>
+  <figcaption className="sr-only">
+    Monthly revenue chart. Revenue grew from $42K in January
+    to $78K in June 2026, a 85% increase.
+  </figcaption>
+  <svg
+    role="img"
+    aria-label="Monthly revenue bar chart, Jan–Jun 2026"
+  >
+    {/* chart content */}
+  </svg>
+  {showTable && <RevenueDataTable />}
+</figure>
+```
+
+**Rules:**
+- `role="img"` on SVG with `aria-label` describing the chart
+- Provide a data table equivalent — screen readers need the underlying data
+- Don't rely on color alone to encode data series
+- Interactive charts: `Tab` to focus, arrows to move between data points
+
+---
+
+## Stat Component
+
+Use the `Stat` component for single-metric KPIs — it handles label, value, change indicator, and description with proper accessibility semantics.
+
+```tsx
+import { Stat } from "@opticule/ds";
+
+<Stat
+  label="Total Revenue"
+  value="$142K"
+  change="+12%"
+  changeType="increase"
+  description="vs. last month"
+/>
+```

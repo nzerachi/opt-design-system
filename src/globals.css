@@ -106,6 +106,9 @@
 
 @import "tailwindcss";
 
+/* 2. Import Design Token CSS (generates :root vars and .dark/.high-contrast overrides) */
+@import "./tokens/tokens.css";
+
 @theme {
   /* Fonts */
   --font-sans:
@@ -124,18 +127,51 @@
   --color-brand-folly: #ff004f;
   --color-brand-orange: #ff8000;
 
-  /* Semantic Colors (The Fix: Wrapping variables in hsl() ) */
+  /* Core semantic colors */
   --color-background: hsl(var(--background));
   --color-obackground: hsl(var(--obackground));
   --color-foreground: hsl(var(--foreground));
 
   --color-muted-light: hsl(var(--muted-light));
   --color-muted-dark: hsl(var(--muted-dark));
+  /* Shorthand alias used by bg-muted, text-muted, etc. */
+  --color-muted: hsl(var(--muted-light));
 
   --color-destructive: hsl(var(--destructive));
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
+
+  /* Semantic background tokens — maps bg-bg-* utility classes */
+  --color-bg-primary:   hsl(var(--bg-primary));
+  --color-bg-secondary: hsl(var(--bg-secondary));
+  --color-bg-tertiary:  hsl(var(--bg-tertiary));
+  --color-bg-card:      hsl(var(--bg-card));
+  --color-bg-popover:   hsl(var(--bg-popover));
+  --color-bg-muted:     hsl(var(--bg-muted));
+  --color-bg-brand:     var(--bg-brand);
+  --color-bg-error:     var(--bg-error);
+  --color-bg-warning:   var(--bg-warning);
+  --color-bg-success:   var(--bg-success);
+  --color-bg-info:      var(--bg-info);
+  --color-bg-input:     var(--bg-input);
+
+  /* Semantic text tokens — maps text-text-* utility classes */
+  --color-text-primary:   hsl(var(--text-primary));
+  --color-text-secondary: hsl(var(--text-secondary));
+  --color-text-tertiary:  hsl(var(--text-tertiary));
+  --color-text-disabled:  hsl(var(--text-disabled));
+  --color-text-inverse:   hsl(var(--text-inverse));
+  --color-text-brand:     var(--text-brand);
+  --color-text-error:     var(--text-error);
+  --color-text-success:   var(--text-success);
+  --color-text-warning:   var(--text-warning);
+  --color-text-info:      var(--text-info);
+
+  /* Semantic border tokens */
+  --color-border-default:  hsl(var(--border-default));
+  --color-border-strong:   hsl(var(--border-strong));
+  --color-border-disabled: hsl(var(--border-disabled));
 
   /* Radius defaults */
   --radius-lg: var(--radius);
@@ -275,6 +311,66 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+/* ============================================================
+   Additional keyframe animations used by the component library
+   ============================================================ */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes fade-out {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes scale-out {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(0.95); }
+}
+@keyframes slide-in-from-top {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-in-from-bottom {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-in-from-left {
+  from { opacity: 0; transform: translateX(-8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes slide-in-from-right {
+  from { opacity: 0; transform: translateX(8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to   { background-position: 200% 0; }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes pulse-scale {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.05); }
+}
+
+/* Respect prefers-reduced-motion — disable all transitions and animations */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 

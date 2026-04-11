@@ -21,7 +21,6 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Path Aliases - Needed for your "@/" imports */
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     }
